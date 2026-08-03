@@ -65,6 +65,23 @@
   }
 }
 
+/* Material swaps the header title from the site name to the current page
+ * title once the H1 scrolls out of view, by adding .md-header__title--active.
+ * Keep the site name showing at all times: the page title is already the H1,
+ * the breadcrumb and the browser tab, and a header caption that changes as you
+ * scroll reads as a glitch rather than a feature.
+ */
+.md-header__title--active .md-header__topic:first-child {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  z-index: 0;
+}
+
+.md-header__title .md-header__topic + .md-header__topic {
+  display: none;
+}
+
 /* The site title sits beside the logo. Give it room to breathe against the
  * larger mark, and keep it from wrapping mid-phrase on medium widths.
  */
@@ -106,10 +123,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;
-  width: 100%;
-  max-width: none;
   flex-wrap: wrap;
   padding: 0.2rem 0;
+
+  /* flex-basis 100%, not width:100%. .md-copyright is a flex item of
+   * .md-footer-meta__inner, and Safari resolves a percentage width on a flex
+   * item against the flex algorithm rather than the containing block, so it
+   * shrinks to its content there while Chrome fills the row. The credit's
+   * margin-left:auto then pushes it only to the end of that narrow box, which
+   * is why the logo sat mid-row in Safari and hard right in Chrome. Setting
+   * the basis makes the row fill in both.
+   */
+  flex: 1 1 100%;
+  max-width: none;
 }
 
 .rn3-footer__left {
@@ -157,8 +183,13 @@
  * data-md-color-scheme on <html> from JavaScript, so any rule keyed on it
  * would not apply before that runs, or at all with JavaScript disabled.
  */
-.rn3-credit__logo {
-  height: 1.05rem;
+/* Specificity matters here. Material ships `.md-typeset img {height:auto}` at
+ * 0-1-1, which outranks a lone class at 0-1-0, so `.rn3-credit__logo` on its
+ * own silently lost and the logo rendered at its natural 90px however small a
+ * height was set. Qualifying with the parent takes this to 0-2-0 and wins.
+ */
+.rn3-credit .rn3-credit__logo {
+  height: 2.25rem;
   width: auto;
   display: block;
 }
