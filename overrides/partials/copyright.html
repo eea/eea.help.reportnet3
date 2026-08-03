@@ -1,0 +1,43 @@
+{#-
+  Overrides Material's default copyright partial.
+
+  Reproduces the footer of the original help site: a copyright line, then
+  "Created and maintained by" followed by the European Environment Agency
+  logo, all sitting bottom left. Material places .md-copyright at the start of
+  the footer's flex row, so no positioning is needed here — see
+  assets/theme/extra.css for the layout and for how the logo is kept legible
+  in dark mode, where its black lettering would otherwise disappear.
+
+  The year comes from the build date rather than being hardcoded, so it cannot
+  go stale. The site rebuilds on every push.
+-#}
+<div class="md-copyright">
+  <div class="md-copyright__highlight">
+    &copy; {{ build_date_utc.year }} {{ config.site_name }}
+  </div>
+
+  <div class="rn3-credit">
+    <span class="rn3-credit__text">Created and maintained by</span>
+    <a
+      href="https://www.eea.europa.eu/"
+      target="_blank"
+      rel="noopener"
+      class="rn3-credit__link"
+    >
+      <img
+        src="{{ 'assets/theme/eea-logo.png' | url }}"
+        alt="European Environment Agency"
+        class="rn3-credit__logo"
+        width="445"
+        height="90"
+      >
+    </a>
+  </div>
+
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

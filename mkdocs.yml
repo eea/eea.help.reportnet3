@@ -1,11 +1,10 @@
-site_name: Reportnet 3 documentation
-site_description: User guide, service documentation and operational runbooks for the Reportnet 3 platform
+site_name: Reportnet Help Pages
+site_description: Help pages for the Reportnet 3 environmental data reporting platform
 # GitHub Pages serves this project site from a subpath, which has to be part of
 # site_url or the generated redirect stubs and canonical links point at the
 # domain root and 404. Change this if the site later moves to a custom domain
 # such as help.reportnet.europa.eu.
 site_url: https://eea.github.io/eea.help.reportnet3/
-copyright: European Environment Agency
 
 # repo_url / edit_uri drive the "Edit this page" link on every page.
 repo_url: https://github.com/eea/eea.help.reportnet3
@@ -16,6 +15,9 @@ docs_dir: docs
 theme:
   name: material
   language: en
+  # Enables overrides/partials/copyright.html, which rebuilds the
+  # original help site's footer credit.
+  custom_dir: overrides
   # Sourced from the help site. The logo is a solid navy block, so the header
   # colour in assets/theme/extra.css is sampled from it to match.
   logo: assets/theme/reportnet3-logo.png
@@ -144,10 +146,10 @@ validation:
     not_found: warn
 
 extra:
-  social:
-    - icon: material/web
-      link: https://www.eea.europa.eu/
-      name: European Environment Agency
+  # Points the header logo and site title at the Reportnet platform itself
+  # rather than at this site's own home page. Material reads this key directly;
+  # no theme override is needed.
+  homepage: https://reportnet.europa.eu/
 
 extra_css:
   - assets/theme/extra.css

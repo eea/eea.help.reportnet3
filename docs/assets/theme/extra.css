@@ -32,22 +32,110 @@
   color: var(--md-primary-fg-color--light);
 }
 
-/* Material sizes the header logo at 1.2rem, which renders the wordmark in this
- * logo too small to read. The logo is 144x48, so height alone keeps the ratio.
+/* Material sizes the header logo at 1.2rem, which renders this wordmark too
+ * small to read. The logo is 144x48; setting height alone keeps the ratio.
+ * The header is flex and sized by its content, so it grows to fit rather than
+ * clipping. Padding is trimmed back so the extra height goes to the logo
+ * rather than to whitespace around it.
+ *
+ * 2.4rem is 48px at Material's 20px rem base — exactly the source image's own
+ * height, and so the largest size that stays sharp. There is no
+ * higher-resolution original: the uncropped file on the help site is 170x48,
+ * the same height with more padding. Going beyond this upscales and blurs. If
+ * a larger logo is ever wanted, a bigger source asset has to come first.
  */
-.md-header__button.md-logo img {
-  height: 1.8rem;
+.md-header__button.md-logo {
+  padding: 0.2rem 0.4rem;
+  margin: 0.2rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.4rem;
   width: auto;
 }
 
-/* The logo already carries the product name, so the site title beside it is
- * redundant on wide screens. Keep it for screen readers and narrow viewports.
+/* On phones the header is tighter, so scale back rather than letting the logo
+ * push the search and menu buttons off the row.
  */
-@media screen and (min-width: 76.25em) {
-  .md-header__title .md-header__topic:first-child {
-    font-weight: 400;
-    opacity: 0.85;
+@media screen and (max-width: 44.9375em) {
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    height: 1.9rem;
   }
+}
+
+/* The site title sits beside the logo. Give it room to breathe against the
+ * larger mark, and keep it from wrapping mid-phrase on medium widths.
+ */
+.md-header__title {
+  margin-left: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.md-header__title .md-header__topic {
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------------
+ * Footer credit — "Created and maintained by" + the EEA logo, bottom left.
+ * Markup in overrides/partials/copyright.html.
+ * ------------------------------------------------------------------------- */
+
+.rn3-credit {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.4rem 0;
+  flex-wrap: wrap;          /* text and logo stack on very narrow screens */
+}
+
+.rn3-credit__text {
+  font-size: 0.64rem;
+  line-height: 1.2;
+}
+
+.rn3-credit__link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Source is 445x90. Held well below native so it stays crisp on high-DPI
+ * screens, where a footer mark at native size would look soft.
+ */
+.rn3-credit__logo {
+  height: 1.6rem;
+  width: auto;
+  display: block;
+}
+
+/* Material's footer strip is dark in both colour schemes, but the EEA logo is
+ * black lettering on transparency and would be invisible on it. Lifting the
+ * strip to white in light mode shows the mark in its real colours, which is
+ * how the original help site presents it.
+ */
+[data-md-color-scheme="default"] .md-footer-meta {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+[data-md-color-scheme="default"] .md-footer-meta .md-copyright,
+[data-md-color-scheme="default"] .md-footer-meta .md-copyright__highlight {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[data-md-color-scheme="default"] .md-footer-meta a {
+  color: var(--md-accent-fg-color);
+}
+
+/* Dark mode keeps the dark strip, so the logo is flattened to solid white.
+ * brightness(0) first collapses it to black, then invert(1) to white —
+ * invert alone would flip the starburst's teal and blue to orange and yellow.
+ * The colour is lost, which is the accepted trade for legibility here.
+ */
+[data-md-color-scheme="slate"] .rn3-credit__logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 /* Dark mode: the navy is dark enough to work as-is, but the body accent needs
