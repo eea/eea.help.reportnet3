@@ -1,21 +1,25 @@
-# Reportnet 3 documentation
+# About
 
 Reportnet 3 is the European Environment Agency's platform for environmental data reporting. Countries and organisations submit data against reporting obligations, the platform validates it against quality control rules, and the accepted data is released into data collections for downstream use.
 
-This site holds two kinds of documentation, aimed at different readers.
+These pages explain how to use the platform, and how to drive it programmatically.
 
-## User guide
+## Where to start
 
-How to use the platform through its web interface, and how to drive it programmatically through the REST API. Written for the people who report data and for the people who design the dataflows they report into.
+The documentation is organised around what you are trying to do rather than around the software's internal structure, so the section you want depends on your role in a dataflow.
 
-- [Reporter](01_user-guide/reporter/index.md) — submitting, validating and releasing data
-- [Requester](01_user-guide/requester/index.md) — creating dataflows, dataset schemas and quality control rules
-- [Rest API](01_user-guide/rest-api/index.md) — import, export, validation and job polling endpoints
+**[General](general/index.md)** covers the things everyone needs first: getting an EU Login account, linking it to Reportnet, multi-factor authentication, and your user settings.
 
-This section is migrated from `help.reportnet.europa.eu` and keeps that site's page order.
+**[Reporters](reporter/index.md)** is for the people who submit data. It walks through the full cycle — finding your dataflow, importing and editing data, running validations, and releasing to a data collection.
 
-## Developer and operations documentation
+**[Requester](requester/index.md)** is for the people who design what gets reported. It covers creating dataflows and dataset schemas, writing quality control rules including custom SQL validations, and managing reference data and lead reporters.
 
-How the platform is built: the microservice architecture, the domain model behind each service, the data stores, and the operational runbooks. Written for developers joining a service, and for anyone who needs a mental model of how the pieces fit together without reading source code.
+**[Rest API](rest-api/index.md)** documents the import, export and validation endpoints, how to authenticate with an API key, and how to poll a job for its status. This is the section to read if you are integrating FME or your own scripts.
 
-See `architecture.md` for the system diagram and the per-service deep dives it links to.
+**[Webforms](webforms.md)** and **[Preparation datasets](preparation-datasets.md)** cover two more specialised parts of the platform.
+
+## About these pages
+
+This documentation was migrated from `help.reportnet.europa.eu` and keeps that site's page order. Every page carries an "Edit this page" link that opens the source file on GitHub, so corrections can be proposed as a pull request.
+
+Developer and operations documentation — the microservice architecture, per-service deep dives, the data model and operational runbooks — lives in the same repository but is not yet part of this site. See the repository README.

@@ -1,5 +1,8 @@
 nav:
-  - index.md
-  - 01_user-guide
-  # Developer and operations sections are added here as their content moves
-  # into docs/. Order in this list is the order of the top-level tabs.
+  - About: index.md
+  - General: general
+  - Reporters: reporter
+  - Requester: requester
+  - Preparation datasets: preparation-datasets.md
+  - Webforms: webforms.md
+  - Rest API: rest-api

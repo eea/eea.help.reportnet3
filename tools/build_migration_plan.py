@@ -38,8 +38,16 @@ import argparse
 import unicodedata
 from pathlib import Path
 
-# Where the migrated user guide lands inside the docs tree.
-DOCS_ROOT = "docs/01_user-guide"
+# Where the migrated user guide lands inside the docs tree. The sections sit
+# directly under docs/ rather than behind a "User guide" wrapper — the wrapper
+# added a navigation level without earning one, and it put a dead "01_user-guide"
+# segment in every published URL.
+DOCS_ROOT = "docs"
+
+# The WordPress menu label is not always the best tab label.
+SECTION_TITLE_OVERRIDES = {
+    "Reporter": "Reporters",
+}
 
 # Titles that slugify into something too long or awkward to live with.
 SLUG_OVERRIDES = {
@@ -95,9 +103,12 @@ def build(tree):
 
     def walk(nodes, parent_dir, breadcrumb):
         for order, node in enumerate(nodes):
-            title = node["title"]
+            # The override changes the displayed label only. The slug stays
+            # derived from the original title so directory names and published
+            # URLs do not move when someone relabels a tab.
+            title = SECTION_TITLE_OVERRIDES.get(node["title"], node["title"])
             old = node["path"]
-            slug = file_slug(title)
+            slug = file_slug(node["title"])
             crumb = breadcrumb + [title]
 
             if old in seen:

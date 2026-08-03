@@ -67,9 +67,15 @@ def build_pages_files(entries, aliases, docs_root):
             (a["order"], rel, a["title"], True))
 
     # Directory -> its display title, taken from the section page that owns it.
+    # The docs root gets no title: site_name already names the site, and a
+    # title here would reintroduce the wrapper level the sections were lifted
+    # out of.
     dir_title = {e["new_path"].rsplit("/", 1)[0]: e["title"]
                  for e in entries if e["is_section"]}
-    dir_title[docs_root] = "User guide"
+
+    # The site landing page is not a migrated page, so it is not in the plan.
+    # It leads the root nav.
+    dirs.setdefault(docs_root, []).insert(0, (-2, "index.md", "About", False))
 
     written = []
     for d, items in sorted(dirs.items()):

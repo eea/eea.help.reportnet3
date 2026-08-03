@@ -1,10 +1,198 @@
 # Reportnet 3 documentation
 
-Documentation for the [Reportnet 3](https://reportnet.europa.eu/) platform — the European Environment Agency's system for environmental data reporting.
+Source for the Reportnet 3 help pages.
 
 **Published site: <https://eea.github.io/eea.help.reportnet3/>**
 
-The site rebuilds automatically from `main`. Every pull request runs the same build with `--strict`, so a broken internal link or a page missing from the navigation fails the check rather than reaching the site.
+Every page on the site comes from a Markdown file in `docs/`. Change the file, and the site rebuilds itself. There is no CMS to log into and no separate publishing step.
+
+---
+
+## How publishing works
+
+Pushing to `main` triggers a GitHub Actions workflow that builds the site and deploys it. It takes about a minute. You can watch it under the [Actions tab](https://github.com/eea/eea.help.reportnet3/actions).
+
+Pull requests run the same build, but do not deploy. The build uses `--strict`, which means it **fails** on a broken internal link or a page missing from the navigation. If your pull request shows a red cross, the site would have been broken — read the log, fix it, push again.
+
+This is deliberate. It is the reason pages cannot quietly go missing or end up unreachable.
+
+---
+
+## Maintaining the pages
+
+Two ways to work. Use whichever suits the change.
+
+**Directly on GitHub** — no software to install. Good for typos, wording, adding a paragraph. Every page on the published site has an "Edit this page" pencil icon at the top right that takes you straight to the right file in the GitHub editor.
+
+**On your own machine** — needed if you are adding images, moving pages around, or want to preview before publishing. See [Working locally](#working-locally).
+
+### Editing an existing page
+
+1. Open the page on the published site and click the pencil icon at the top right. This opens the exact source file on GitHub.
+2. Click the pencil icon again in GitHub to enter edit mode.
+3. Make your change. The content is [Markdown](#markdown-quick-reference).
+4. Scroll down to **Commit changes**. Write a short line saying what you changed.
+5. Choose **Create a new branch and start a pull request**, then **Propose changes**.
+6. On the next screen, click **Create pull request**.
+7. Wait for the check to go green, then click **Merge pull request**.
+
+The site updates about a minute after merging.
+
+Committing straight to `main` also works and skips steps 5 to 7, but you lose the safety net — if the build fails, the live site keeps the last good version, but your change is not published and nobody is told.
+
+### Adding a new page
+
+A new page needs two things: the file, and a line in its section's `.pages` file telling the navigation where it goes. **Both are required.** A page that is not listed in `.pages` fails the build, on purpose, so that pages cannot become orphans.
+
+1. Decide which section it belongs to — that is which folder under `docs/` it goes in. For example, a new page about validating data belongs in `docs/reporter/validate-data/`.
+2. Create the file with a short, lowercase, hyphenated name ending in `.md`, for example `bulk-validation.md`. Do not put numbers in the filename; ordering is handled separately.
+3. Start the file with a single `#` heading — this is the page title.
+4. Open the `.pages` file in that same folder.
+5. Add a line under `nav:` at the position where the page should appear in the menu:
+
+   ```yaml
+   title: Validate data
+   nav:
+     - index.md
+     - Quality control rules: quality-control-rules.md
+     - Execute validation: execute-validation.md
+     - Bulk validation: bulk-validation.md      # <- the new page
+     - Filter table data: filter-table-data.md
+   ```
+
+   The text before the colon is what appears in the menu. It does not have to match the filename or the heading, though it usually should.
+6. Commit both files together.
+
+### Adding a new section
+
+A section is a folder with its own landing page.
+
+1. Create the folder under `docs/`, for example `docs/reporter/bulk-operations/`.
+2. Create `index.md` inside it. This is the section's landing page — what people see when they click the section name in the menu. Give it a `#` heading and a short paragraph explaining what the section covers.
+3. Create a `.pages` file inside the folder:
+
+   ```yaml
+   title: Bulk operations
+   nav:
+     - index.md
+     - Bulk import: bulk-import.md
+     - Bulk export: bulk-export.md
+   ```
+
+   `title:` is the section name in the menu. `index.md` must be listed first so the landing page appears at the top.
+4. Add the folder to the **parent** folder's `.pages` file, at the position you want it:
+
+   ```yaml
+   title: Reporters
+   nav:
+     - index.md
+     - Dataflows overview page: dataflows-overview-page.md
+     - Bulk operations: bulk-operations        # <- folder name, no .md
+     - Submit data: submit-data
+   ```
+
+   Note the difference: pages end in `.md`, folders do not.
+
+To add a whole new top-level tab, do the same but edit `docs/.pages` as the parent.
+
+### Changing the order of pages
+
+Reorder the lines in the relevant `.pages` file. That is the entire process.
+
+Order is **not** alphabetical and is **not** encoded in filenames, which is why you never need to rename anything to move a page. Renaming would change its URL and break every link pointing at it; reordering a line does not.
+
+### Renaming or moving a page
+
+Renaming a file changes its published URL, so anyone who bookmarked the old address gets a 404. If the page has been live for a while, add a redirect:
+
+1. Rename or move the file, and update its line in the `.pages` file.
+2. Open `mkdocs.yml` and find the `redirect_maps:` block.
+3. Add a line **below** the `# END GENERATED REDIRECTS` marker, in the form `old-path/index.md: new/path.md`.
+
+Do not edit between the `BEGIN GENERATED` and `END GENERATED` markers. Those lines are regenerated by the migration tooling and your change would be overwritten.
+
+### Adding images
+
+Images live in `docs/assets/`, all in one folder regardless of which page uses them. That way an image used on several pages is stored once.
+
+1. Add the image file to `docs/assets/`. Use a descriptive name — `release-to-data-collection.png`, not `image-63.png`.
+2. Reference it from your page with a relative path back up to `assets/`. The number of `../` depends on how deep the page sits:
+
+   ```markdown
+   ![Releasing to a data collection](../../assets/release-to-data-collection.png)
+   ```
+
+   From `docs/reporter/submit-data/dataset-actions.md` that is `../../assets/`. From `docs/webforms.md`, which sits at the top level, it is just `assets/`.
+3. The text in the square brackets is the alt text, read aloud by screen readers. Write something that describes the image.
+
+If you get the path wrong the build fails and tells you, so this is safe to guess at.
+
+### Deleting a page
+
+Delete the file and remove its line from the `.pages` file. Both, or the build fails. Consider adding a redirect to whatever replaced it, as described above.
+
+---
+
+## Working locally
+
+Needed for previewing, and easier than the web editor for anything touching more than one file.
+
+```bash
+git clone https://github.com/eea/eea.help.reportnet3.git
+cd eea.help.reportnet3
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-docs.txt
+.venv/bin/mkdocs serve
+```
+
+Open <http://127.0.0.1:8000/>. The preview reloads as you save, so you can keep it open in a browser beside your editor.
+
+Before pushing, check that the real build passes:
+
+```bash
+.venv/bin/mkdocs build --strict
+```
+
+If that succeeds, so will the pull request check.
+
+---
+
+## Markdown quick reference
+
+```markdown
+# Page title            (one per page, at the top)
+## A section heading
+### A subheading
+
+**bold**   *italic*   `inline code`
+
+- a bullet
+- another bullet
+
+1. a numbered step
+2. another step
+
+[link to another page](../general/whats-new.md)
+[link to a website](https://reportnet.europa.eu/)
+
+![alt text](../assets/screenshot.png)
+
+| Column | Column |
+|--------|--------|
+| value  | value  |
+```
+
+Links between pages use the **file path**, ending in `.md`, not the published URL. The build rewrites them and fails if the target does not exist — which is how broken links get caught before anyone sees them.
+
+For callouts, use an admonition:
+
+```markdown
+!!! note
+    Text of the note, indented by four spaces.
+
+!!! warning
+    Use for things that can lose data.
+```
 
 ---
 
@@ -12,69 +200,28 @@ The site rebuilds automatically from `main`. Every pull request runs the same bu
 
 | Path | Contents |
 |---|---|
-| `docs/01_user-guide/` | The user guide, migrated from `help.reportnet.europa.eu`. This is what the published site serves. |
+| `docs/` | The published site. Everything else below is not published. |
+| `docs/assets/` | All images and downloadable files |
 | `CoreDomain/`, `Persistence/`, `Infrastructure/`, `SupportServices/`, `IntegrationServices/`, `DataLake/`, `Frontend/` | Per-service deep dives written by reading the Reportnet 3 source code |
-| `architecture.md`, `RestAPI.md`, `api_key.md` | System architecture diagram, the full REST endpoint surface, and the API key mechanism |
-| `wiki_output/` | Pages extracted from the Redmine developer wiki, reorganised into numbered folders and annotated with verification notes |
-| `tools/` | The help-site migration pipeline |
-| `migration/` | Machine-readable record of that migration |
+| `architecture.md`, `RestAPI.md`, `api_key.md` | System architecture, the full REST endpoint surface, and the API key mechanism |
+| `wiki_output/` | Pages extracted from the Redmine developer wiki, with verification notes |
+| `tools/`, `migration/` | The help-site migration pipeline and its records |
+| `CLAUDE.md` | Writing conventions — explain why rather than restating what, prose before tables, UK English |
 
-Only `docs/` is published. The rest is source material that has not yet been folded into the site — see [Next steps](#next-steps).
+---
 
-## Working on the documentation
+## Background: the migration
 
-Writing conventions are in [`CLAUDE.md`](CLAUDE.md): explain why something exists rather than restating what the code already says, prose before tables, UK English, sentence-case headings.
+The pages came from `help.reportnet.europa.eu`, a WordPress site. Its page order and hierarchy lived **only** in a WordPress menu record — the URLs did not reflect it. `/fme-connectors/` and `/import-api-endpoints/` were root-level pages displayed two levels deep in the menu, and the entire Requester section was served from `/sample-page/`, the default slug WordPress creates on install. The WordPress REST API was locked, so the ordering could not be read directly.
 
-To preview locally:
+The tooling in `tools/` therefore captured the menu first and generated everything else from it. 61 pages, 210 images and 3 linked files came across, with 102 internal links rewritten.
 
-```bash
-python3 -m venv .venv
-.venv/bin/pip install -r requirements-docs.txt
-.venv/bin/mkdocs serve
-```
+`mkdocs.yml` carries 59 generated redirects mapping every old WordPress URL to its new page, so if `help.reportnet.europa.eu` is ever pointed at this site, existing bookmarks and the help links embedded in the Reportnet 3 interface keep working.
 
-Then open <http://127.0.0.1:8000/>.
+[`migration/README.md`](migration/README.md) records every decision, including which pages were not migrated and why.
 
-### Page order
+### Known gaps
 
-Navigation order is **not** alphabetical and **not** encoded in filenames. Each directory carries a `.pages` file listing its children in order, read by the `awesome-pages` plugin:
-
-```yaml
-title: Reporter
-nav:
-  - index.md
-  - Dataflows overview page: dataflows-overview-page.md
-  - Dataflow home page: dataflow-home-page
-  - Submit data: submit-data
-  - Validate data: validate-data
-  - Release data: release-data
-```
-
-To move a page, reorder the lines. To add one, add a line next to its siblings. Filenames never need renaming, so links and URLs stay stable when the order changes.
-
-A new page that is not listed in a `.pages` file will fail the strict build. That is deliberate — it means pages cannot be silently orphaned.
-
-## The help-site migration
-
-The user guide came from a WordPress site whose page order and hierarchy lived **only** in a menu record. The URLs did not reflect the structure: `/fme-connectors/` and `/import-api-endpoints/` were root-level pages shown two levels deep in the menu, and the entire Requester section was served from `/sample-page/`, the default slug WordPress creates on install. The WordPress REST API is locked on that host, so `menu_order` could not be read directly.
-
-The pipeline therefore captures the menu first and generates everything else from it:
-
-```
-tools/extract_help_menu.py      ->  migration/help_menu.json     the ordering, captured
-tools/build_migration_plan.py   ->  migration/path_map.json      old URL -> new file
-tools/crawl_help_content.py     ->  docs/01_user-guide/**/*.md   content + assets
-tools/generate_nav.py           ->  **/.pages + redirect map
-```
-
-61 pages, 210 images and 3 linked files were migrated, with 102 internal links rewritten to relative paths.
-
-`mkdocs.yml` carries 60 generated redirects mapping every old WordPress URL to its new page. If `help.reportnet.europa.eu` is ever repointed at this site, existing bookmarks and the help links embedded in the Reportnet 3 UI keep working.
-
-[`migration/README.md`](migration/README.md) records every decision taken, including the pages that were not migrated and why.
-
-## Next steps
-
-- Fold the developer deep dives and `wiki_output/` into `docs/` so they are searchable alongside the user guide. `docs/.pages` has a commented slot for them.
-- Replace the generated index for "ReportNet3 Import/Export (vs CWS)", whose WordPress page is empty.
-- Two Rest API links point at `/sql-db-setup/` and `/data-flow-monitoring/`, unpublished WordPress drafts with no content. Either write them or remove the links.
+- The landing page for "ReportNet3 Import/Export (vs CWS)" is generated from its children, because the WordPress original has no content. It needs writing.
+- Two links in the Rest API section point at `/sql-db-setup/` and `/data-flow-monitoring/`, WordPress drafts that were never written. Either write them or remove the links.
+- The developer and operations documentation is in this repository but not on the site. Folding it in means moving it under `docs/` and adding it to `docs/.pages`.
