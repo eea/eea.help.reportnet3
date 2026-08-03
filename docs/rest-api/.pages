@@ -4,6 +4,5 @@ nav:
   - Import API endpoints: import-api-endpoints.md
   - Export API Endpoints: export-api-endpoints.md
   - Validation API endpoints: validation-api-endpoints.md
-  - External integration possibilities: ../requester/import-export-vs-cws/external-integration-possibilities.md   # also listed under its canonical section
   - Poll for job status: poll-for-job-status.md
   - Validation Results per Release Snapshot: validation-results-per-snapshot.md

@@ -209,3 +209,7 @@ The following limitations are enforced:
   * The maximum number of fields per tables is 155 fields
   * The maximum number of tables per dataset is 60 tables
   * The maximum number of datasets per dataflow is 22 datasets
+
+## See also
+
+- [Example: Configure a simple questionnaire](../example-simple-questionnaire.md)

@@ -1,0 +1,62 @@
+/* Reportnet 3 brand colours.
+ *
+ * The header logo is a solid block rather than a transparent mark, so the
+ * header has to match its background exactly or the logo reads as a pasted-on
+ * rectangle. Both values below are sampled from the logo itself:
+ *   #0c2b59  the navy field, 84% of the image
+ *   #247c7e  the teal in the starburst
+ *
+ * Material only accepts its own named colours in mkdocs.yml, so the palette
+ * there is set to "custom" and the actual values are defined here.
+ */
+
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #0c2b59;
+  --md-primary-fg-color--light: #144f8b;
+  --md-primary-fg-color--dark:  #081d3c;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color:         #247c7e;
+  --md-accent-fg-color--transparent: rgba(36, 124, 126, 0.1);
+}
+
+/* Links pick up the accent rather than the default indigo. */
+.md-typeset a {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+}
+
+/* Material sizes the header logo at 1.2rem, which renders the wordmark in this
+ * logo too small to read. The logo is 144x48, so height alone keeps the ratio.
+ */
+.md-header__button.md-logo img {
+  height: 1.8rem;
+  width: auto;
+}
+
+/* The logo already carries the product name, so the site title beside it is
+ * redundant on wide screens. Keep it for screen readers and narrow viewports.
+ */
+@media screen and (min-width: 76.25em) {
+  .md-header__title .md-header__topic:first-child {
+    font-weight: 400;
+    opacity: 0.85;
+  }
+}
+
+/* Dark mode: the navy is dark enough to work as-is, but the body accent needs
+ * lifting or teal-on-near-black loses contrast against WCAG AA.
+ */
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #3fa8ab;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #3fa8ab;
+}

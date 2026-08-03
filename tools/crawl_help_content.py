@@ -68,6 +68,26 @@ LINK_FIXES = {
         "/sample-page/quality-control-rules/custom-validations-sql/",
 }
 
+# The WordPress menu listed three pages in two places each. MkDocs navigation
+# cannot hold a page in two directories, so each has one canonical position and
+# the second is carried as a "See also" link appended to the section landing
+# page. Keys and values are old WordPress paths, resolved to new relative links
+# at write time so a re-crawl reproduces them rather than losing them.
+CROSS_REFERENCES = {
+    # Release data also listed Manage dataset copies, which lives under Submit data.
+    "/reportnet-3-1-reporter-howto/release-data/": [
+        "/reportnet-3-1-reporter-howto/load-data/submit-data/manage-dataset-copies/",
+    ],
+    # Create a dataset schema also listed the questionnaire example.
+    "/sample-page/create-a-dataset-schema/": [
+        "/sample-page/example-configure-a-simple-questionnaire/",
+    ],
+    # Rest API also listed External integration possibilities.
+    "/rest-api/": [
+        "/reportnet-3-1-reporter-howto/release-data/external-integration-possibilities/",
+    ],
+}
+
 # Non-image files linked from page bodies (sample scripts, spreadsheets). These
 # are content, not decoration, so they come across with the pages.
 DOWNLOADABLE_EXT = {".zip", ".py", ".pdf", ".docx", ".doc", ".xlsx", ".xls",
@@ -143,7 +163,7 @@ class Crawler:
             "pages": 0, "empty": 0, "stub_index": 0, "failed": 0,
             "images": 0, "images_deduped": 0, "files_downloaded": 0,
             "links_rewritten": 0, "links_external": 0, "links_unresolved": 0,
-            "link_text_retitled": 0,
+            "link_text_retitled": 0, "cross_references": 0,
         }
         # Section landing page -> its child entries, for generating stubs.
         self.children = {}
@@ -287,6 +307,23 @@ class Crawler:
             lines.append(f"- [{kid['title']}]({rel})")
         return "\n".join(lines) + "\n"
 
+    def cross_references(self, entry):
+        """A 'See also' block for pages the old menu listed in two places."""
+        targets = CROSS_REFERENCES.get(entry["old_path"])
+        if not targets:
+            return ""
+        lines = ["", "## See also", ""]
+        for old in targets:
+            target = self.link_map.get(old)
+            if target is None:
+                self.failures.append(
+                    f"cross-reference from {entry['old_path']} -> {old}: not in plan")
+                continue
+            rel = self.relative(entry["new_path"], target)
+            lines.append(f"- [{self.title_map[old]}]({rel})")
+            self.stats["cross_references"] += 1
+        return "\n".join(lines) + "\n"
+
     def fetch_page(self, entry):
         url = entry["old_url"]
         try:
@@ -325,6 +362,7 @@ class Crawler:
 
         self.rewrite(content, entry["new_path"])
         body = clean_markdown(self.conv.handle(str(content)))
+        body += self.cross_references(entry)
 
         front = [
             "---",

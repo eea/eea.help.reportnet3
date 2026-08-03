@@ -95,6 +95,20 @@ A section is a folder with its own landing page.
 
 To add a whole new top-level tab, do the same but edit `docs/.pages` as the parent.
 
+### Linking to a page in a different section
+
+A `.pages` file can only list files that live in **its own folder or a subfolder of it**. It cannot point at a page somewhere else in the site — neither `../other-section/page.md` nor a path from the top of `docs/` works. MkDocs passes such an entry straight through into the sidebar as a link ending in `.md`, which 404s, and the build still passes. The automated check described under [How publishing works](#how-publishing-works) exists to catch exactly this.
+
+So a page cannot appear in two places in the menu. If a page is relevant to a second section, link to it from that section's text instead:
+
+```markdown
+## See also
+
+- [Manage dataset copies](../submit-data/manage-dataset-copies.md)
+```
+
+Links written in the page body are resolved properly, unlike navigation entries. Three pages carry such a block already, because the old WordPress menu listed them twice.
+
 ### Changing the order of pages
 
 Reorder the lines in the relevant `.pages` file. That is the entire process.
@@ -202,6 +216,7 @@ For callouts, use an admonition:
 |---|---|
 | `docs/` | The published site. Everything else below is not published. |
 | `docs/assets/` | All images and downloadable files |
+| `docs/assets/theme/` | Logo, favicon and the brand colours in `extra.css`. The header colour is sampled from the logo, which has a solid background rather than a transparent one — change one and you must change the other. |
 | `CoreDomain/`, `Persistence/`, `Infrastructure/`, `SupportServices/`, `IntegrationServices/`, `DataLake/`, `Frontend/` | Per-service deep dives written by reading the Reportnet 3 source code |
 | `architecture.md`, `RestAPI.md`, `api_key.md` | System architecture, the full REST endpoint surface, and the API key mechanism |
 | `wiki_output/` | Pages extracted from the Redmine developer wiki, with verification notes |

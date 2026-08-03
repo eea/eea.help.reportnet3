@@ -85,3 +85,7 @@ Different API-keys will be generated every time user clicks on ‘Generate new
 API-key’.
 
 API-key could be used as explained in the webforms section
+
+## See also
+
+- [External integration possibilities](../requester/import-export-vs-cws/external-integration-possibilities.md)

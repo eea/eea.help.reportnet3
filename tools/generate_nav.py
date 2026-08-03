@@ -59,12 +59,14 @@ def build_pages_files(entries, aliases, docs_root):
             dirs.setdefault(d, []).append(
                 (e["order"], e["nav_entry"], e["title"], False))
 
-    # A page the WordPress menu shows in two places. One canonical file, listed
-    # a second time by relative path so the new menu matches the old exactly.
-    for a in aliases:
-        rel = Path(os.path.relpath(a["canonical"], a["parent_dir"])).as_posix()
-        dirs.setdefault(a["parent_dir"], []).append(
-            (a["order"], rel, a["title"], True))
+    # Pages the WordPress menu showed in two places are NOT listed twice here.
+    # MkDocs navigation cannot reference a file outside the directory its
+    # .pages sits in — neither a ../ path nor a docs-relative one resolves, and
+    # both are emitted into the sidebar as a raw .md href that 404s. The
+    # duplicate is instead carried as a "See also" link in the page body, which
+    # MkDocs does resolve; see CROSS_REFERENCES in crawl_help_content.py.
+    # A sidebar entry appearing twice also breaks next/previous navigation, so
+    # one canonical position per page is the better outcome regardless.
 
     # Directory -> its display title, taken from the section page that owns it.
     # The docs root gets no title: site_name already names the site, and a

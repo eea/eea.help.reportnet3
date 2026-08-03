@@ -16,6 +16,10 @@ docs_dir: docs
 theme:
   name: material
   language: en
+  # Sourced from the help site. The logo is a solid navy block, so the header
+  # colour in assets/theme/extra.css is sampled from it to match.
+  logo: assets/theme/reportnet3-logo.png
+  favicon: assets/theme/favicon.png
   features:
     - navigation.tabs          # top-level sections become tabs
     - navigation.sections
@@ -31,15 +35,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -146,3 +150,6 @@ extra:
     - icon: material/web
       link: https://www.eea.europa.eu/
       name: European Environment Agency
+
+extra_css:
+  - assets/theme/extra.css
