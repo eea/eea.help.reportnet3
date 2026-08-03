@@ -102,40 +102,19 @@
 
 /* Source is 445x90. Held well below native so it stays crisp on high-DPI
  * screens, where a footer mark at native size would look soft.
+ *
+ * The image used here is the recoloured variant from tools/make_dark_logo.py.
+ * Material's footer strip is dark in both colour schemes, and the EEA logo as
+ * supplied is black lettering on transparency, so it would be invisible. The
+ * variant whitens only the lettering and leaves the starburst in its brand
+ * colours. No colour-scheme selector is involved, deliberately: Material sets
+ * data-md-color-scheme on <html> from JavaScript, so any rule keyed on it
+ * would not apply before that runs, or at all with JavaScript disabled.
  */
 .rn3-credit__logo {
   height: 1.6rem;
   width: auto;
   display: block;
-}
-
-/* Material's footer strip is dark in both colour schemes, but the EEA logo is
- * black lettering on transparency and would be invisible on it. Lifting the
- * strip to white in light mode shows the mark in its real colours, which is
- * how the original help site presents it.
- */
-[data-md-color-scheme="default"] .md-footer-meta {
-  background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-[data-md-color-scheme="default"] .md-footer-meta .md-copyright,
-[data-md-color-scheme="default"] .md-footer-meta .md-copyright__highlight {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-[data-md-color-scheme="default"] .md-footer-meta a {
-  color: var(--md-accent-fg-color);
-}
-
-/* Dark mode keeps the dark strip, so the logo is flattened to solid white.
- * brightness(0) first collapses it to black, then invert(1) to white —
- * invert alone would flip the starburst's teal and blue to orange and yellow.
- * The colour is lost, which is the accepted trade for legibility here.
- */
-[data-md-color-scheme="slate"] .rn3-credit__logo {
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
 }
 
 /* Dark mode: the navy is dark enough to work as-is, but the body accent needs

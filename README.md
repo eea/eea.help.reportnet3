@@ -225,6 +225,7 @@ For callouts, use an admonition:
 | `docs/assets/` | All images and downloadable files |
 | `docs/assets/theme/` | Logos, favicon and the brand colours in `extra.css`. The header colour is sampled from the Reportnet logo, which has a solid background rather than a transparent one — change one and you must change the other. |
 | `overrides/` | Theme overrides. Currently just the footer credit, which reproduces the "Created and maintained by" line and EEA logo from the original help site. |
+| `tools/make_dark_logo.py` | Regenerates the footer's EEA logo variant. The supplied logo is black lettering on transparency and vanishes on the dark footer, so this whitens the lettering while leaving the starburst in its brand colours. Re-run it if the EEA updates its logo. |
 | `CoreDomain/`, `Persistence/`, `Infrastructure/`, `SupportServices/`, `IntegrationServices/`, `DataLake/`, `Frontend/` | Per-service deep dives written by reading the Reportnet 3 source code |
 | `architecture.md`, `RestAPI.md`, `api_key.md` | System architecture, the full REST endpoint surface, and the API key mechanism |
 | `wiki_output/` | Pages extracted from the Redmine developer wiki, with verification notes |

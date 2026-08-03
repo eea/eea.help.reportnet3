@@ -4,9 +4,14 @@
   Reproduces the footer of the original help site: a copyright line, then
   "Created and maintained by" followed by the European Environment Agency
   logo, all sitting bottom left. Material places .md-copyright at the start of
-  the footer's flex row, so no positioning is needed here — see
-  assets/theme/extra.css for the layout and for how the logo is kept legible
-  in dark mode, where its black lettering would otherwise disappear.
+  the footer's flex row, so no positioning is needed here; see
+  assets/theme/extra.css for the layout.
+
+  The logo referenced is the recoloured variant from tools/make_dark_logo.py,
+  not the file as supplied by the EEA. Material's footer strip is dark in both
+  colour schemes and the original is black lettering on transparency, so it
+  would be invisible. The variant whitens the lettering only and leaves the
+  starburst in its brand colours.
 
   The year comes from the build date rather than being hardcoded, so it cannot
   go stale. The site rebuilds on every push.
@@ -25,7 +30,7 @@
       class="rn3-credit__link"
     >
       <img
-        src="{{ 'assets/theme/eea-logo.png' | url }}"
+        src="{{ 'assets/theme/eea-logo-on-dark.png' | url }}"
         alt="European Environment Agency"
         class="rn3-credit__logo"
         width="445"
