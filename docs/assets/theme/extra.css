@@ -77,6 +77,21 @@
   white-space: nowrap;
 }
 
+/* Material hides the section tabs below 76.1875em — about 1219px — and folds
+ * the whole menu into the hamburger drawer. That is wider than a great many
+ * laptop screens, so the top-level menu vanishes on hardware that has ample
+ * room for it. The seven tabs need roughly 700px, so showing them from 62em
+ * (992px) is comfortable.
+ *
+ * The hamburger stays available at these widths and still opens the full
+ * navigation tree; the tabs simply restore top-level navigation alongside it.
+ */
+@media screen and (min-width: 62em) and (max-width: 76.1875em) {
+  .md-tabs {
+    display: block;
+  }
+}
+
 /* ---------------------------------------------------------------------------
  * Footer: copyright on the left, EEA credit and logo on the right, one row.
  * Markup in overrides/partials/copyright.html.

@@ -24,6 +24,7 @@ theme:
   favicon: assets/theme/favicon.png
   features:
     - navigation.tabs          # top-level sections become tabs
+    - navigation.tabs.sticky   # ...and stay put when scrolling down
     - navigation.sections
     - navigation.top
     - navigation.instant
