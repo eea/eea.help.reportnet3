@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{#-
+  Guards against Web Storage throwing, which breaks the light/dark toggle.
+
+  Material persists the colour scheme in localStorage. In Safari the access
+  itself can throw rather than fail quietly — Private Browsing raises
+  QuotaExceededError on write, and storage can also be blocked by "Prevent
+  cross-site tracking". Material does not catch it, so its palette setup dies
+  before it un-hides the toggle: the light/dark button never appears at all
+  and two uncaught errors land in the console. The site works in Chrome and
+  looks broken in Safari.
+
+  Reproduced by making localStorage throw in WebKit, with and without this
+  shim in place.
+
+  This substitutes an in-memory store when the real one is unusable, so the
+  toggle works for the whole visit. The choice will not survive a reload in
+  that mode, which is inherent to storage being unavailable — but a toggle
+  that works and forgets beats one that never appears.
+
+  It sits in extrahead, inside <head>, because Material's bundle loads at the
+  end of <body> and the substitution has to be in place before it runs.
+-#}
+{% block extrahead %}
+  {{ super() }}
+  <script>
+    (function () {
+      "use strict";
+      function usable(store) {
+        try {
+          var probe = "__storage_probe__";
+          store.setItem(probe, probe);
+          store.removeItem(probe);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      }
+
+      function memoryStore() {
+        var data = Object.create(null);
+        return {
+          getItem: function (key) {
+            return Object.prototype.hasOwnProperty.call(data, key) ? data[key] : null;
+          },
+          setItem: function (key, value) { data[key] = String(value); },
+          removeItem: function (key) { delete data[key]; },
+          clear: function () { data = Object.create(null); },
+          key: function (index) {
+            var keys = Object.keys(data);
+            return index < keys.length ? keys[index] : null;
+          },
+          get length() { return Object.keys(data).length; }
+        };
+      }
+
+      ["localStorage", "sessionStorage"].forEach(function (name) {
+        var working = false;
+        try {
+          working = usable(window[name]);
+        } catch (err) {
+          // Reading the property can itself throw when storage is disabled.
+          working = false;
+        }
+        if (working) return;
+
+        var fallback = memoryStore();
+        try {
+          Object.defineProperty(window, name, {
+            configurable: true,
+            get: function () { return fallback; }
+          });
+        } catch (err) {
+          // Nothing further can be done; the toggle stays broken in this
+          // browser, but no other functionality is affected.
+        }
+      });
+    })();
+  </script>
+{% endblock %}
