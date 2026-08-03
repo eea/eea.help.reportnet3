@@ -78,21 +78,51 @@
 }
 
 /* ---------------------------------------------------------------------------
- * Footer credit — "Created and maintained by" + the EEA logo, bottom left.
+ * Footer: copyright on the left, EEA credit and logo on the right, one row.
  * Markup in overrides/partials/copyright.html.
  * ------------------------------------------------------------------------- */
+
+/* Material's .md-copyright is a narrow inline block at the start of the footer
+ * row, so its children stack. Making it fill the row lets the two groups sit
+ * at opposite ends instead, which keeps the footer one line tall.
+ */
+.md-footer-meta__inner .md-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: none;
+  flex-wrap: wrap;
+  padding: 0.2rem 0;
+}
+
+.rn3-footer__left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Material styles .md-copyright__highlight as a block with a bottom margin,
+ * which would force a line break inside the left-hand group.
+ */
+.md-footer-meta__inner .md-copyright__highlight {
+  display: inline;
+  margin: 0;
+}
 
 .rn3-credit {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  margin: 0.4rem 0;
-  flex-wrap: wrap;          /* text and logo stack on very narrow screens */
+  gap: 0.5rem;
+  margin-left: auto;        /* pins the credit to the right edge of the row */
 }
 
 .rn3-credit__text {
   font-size: 0.64rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .rn3-credit__link {
@@ -100,8 +130,9 @@
   align-items: center;
 }
 
-/* Source is 445x90. Held well below native so it stays crisp on high-DPI
- * screens, where a footer mark at native size would look soft.
+/* Source is 445x90. Sized to sit on one line with the text beside it rather
+ * than dominating the strip, and held well below native so it stays crisp on
+ * high-DPI screens.
  *
  * The image used here is the recoloured variant from tools/make_dark_logo.py.
  * Material's footer strip is dark in both colour schemes, and the EEA logo as
@@ -112,7 +143,7 @@
  * would not apply before that runs, or at all with JavaScript disabled.
  */
 .rn3-credit__logo {
-  height: 1.6rem;
+  height: 1.05rem;
   width: auto;
   display: block;
 }
@@ -126,4 +157,17 @@
 
 [data-md-color-scheme="slate"] .md-typeset a {
   color: #3fa8ab;
+}
+
+/* Below the tablet breakpoint the row would otherwise squeeze the credit text
+ * against the copyright. Let the two groups stack and align left.
+ */
+@media screen and (max-width: 44.9375em) {
+  .md-footer-meta__inner .md-copyright {
+    justify-content: flex-start;
+  }
+
+  .rn3-credit {
+    margin-left: 0;
+  }
 }

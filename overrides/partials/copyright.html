@@ -1,11 +1,12 @@
 {#-
   Overrides Material's default copyright partial.
 
-  Reproduces the footer of the original help site: a copyright line, then
-  "Created and maintained by" followed by the European Environment Agency
-  logo, all sitting bottom left. Material places .md-copyright at the start of
-  the footer's flex row, so no positioning is needed here; see
-  assets/theme/extra.css for the layout.
+  Lays the footer out as a single row: copyright and generator notice on the
+  left, "Created and maintained by" with the European Environment Agency logo
+  pushed to the right. Material's default partial stacks each item on its own
+  line, which made the footer several rows tall once the logo was added, so
+  the left-hand items are grouped here and the layout is done in
+  assets/theme/extra.css.
 
   The logo referenced is the recoloured variant from tools/make_dark_logo.py,
   not the file as supplied by the EEA. Material's footer strip is dark in both
@@ -17,8 +18,18 @@
   go stale. The site rebuilds on every push.
 -#}
 <div class="md-copyright">
-  <div class="md-copyright__highlight">
-    &copy; {{ build_date_utc.year }} {{ config.site_name }}
+  <div class="rn3-footer__left">
+    <span class="md-copyright__highlight">
+      &copy; {{ build_date_utc.year }} {{ config.site_name }}
+    </span>
+    {% if not config.extra.generator == false %}
+      <span class="rn3-footer__generator">
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </span>
+    {% endif %}
   </div>
 
   <div class="rn3-credit">
@@ -38,11 +49,4 @@
       >
     </a>
   </div>
-
-  {% if not config.extra.generator == false %}
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  {% endif %}
 </div>
