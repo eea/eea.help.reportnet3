@@ -1,0 +1,4 @@
+title: Manage quality control rules
+nav:
+  - index.md
+  - Custom validations (SQL): custom-validations-sql.md

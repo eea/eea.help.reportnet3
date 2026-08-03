@@ -1,0 +1,14 @@
+# Documentation site build.
+# Pinned deliberately: Material for MkDocs has announced that MkDocs 2.0 will
+# remove the plugin system entirely, which would break awesome-pages and
+# redirects — the two plugins that hold the navigation order and the WordPress
+# URL compatibility. Upgrade only after checking that both still work.
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+mkdocs-awesome-pages-plugin==2.10.1
+mkdocs-redirects==1.2.2
+
+# Migration tooling (tools/*.py). Only needed to re-run the crawl.
+requests==2.32.5
+beautifulsoup4==4.15.0
+html2text==2025.4.15

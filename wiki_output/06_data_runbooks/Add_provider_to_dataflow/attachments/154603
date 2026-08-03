@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>add_new_provider.PNG - Reportnet 3 - Taskman — Think big, act small</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="kr2PbhgHeInUFRzJd93glMf_KS2es9V5DyIcV3prY5PYJSDRQySpR1fuMNj9y0eHC9jT_4QrNVMLyt3ufbAnDg" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/themes/a1/favicon-45ed957b.ico" />
+<link rel="stylesheet" href="/assets/plugin_assets/additionals/variables-ba5d8335.css" media="all" />
+<link rel="stylesheet" href="/assets/jquery/jquery-ui-1.13.2-70e53573.css" media="all" />
+<link rel="stylesheet" href="/assets/tribute-5.1.3-c23a7bf2.css" media="all" />
+<link rel="stylesheet" href="/assets/themes/a1/application-5aafbd3e.css" media="all" />
+<link rel="stylesheet" href="/assets/responsive-194751d3.css" media="all" />
+
+<script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "@rails/request.js": "/assets/requestjs-64720317.js",
+    "application": "/assets/application-20c5ac24.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-7ea3d58b.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-25917588.js",
+    "turndown": "/assets/turndown-93630580.js",
+    "controllers/api_key_copy_controller": "/assets/controllers/api_key_copy_controller-75f835b3.js",
+    "controllers/application": "/assets/controllers/application-fab29967.js",
+    "controllers": "/assets/controllers/index-dfefe98d.js",
+    "controllers/list_autofill_controller": "/assets/controllers/list_autofill_controller-5f013171.js",
+    "controllers/quote_reply_controller": "/assets/controllers/quote_reply_controller-3e6a21f7.js",
+    "controllers/sticky_issue_header_controller": "/assets/controllers/sticky_issue_header_controller-18502bbe.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/requestjs-64720317.js">
+<link rel="modulepreload" href="/assets/application-20c5ac24.js">
+<link rel="modulepreload" href="/assets/stimulus.min-7ea3d58b.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-25917588.js">
+<link rel="modulepreload" href="/assets/turndown-93630580.js">
+<link rel="modulepreload" href="/assets/controllers/api_key_copy_controller-75f835b3.js">
+<link rel="modulepreload" href="/assets/controllers/application-fab29967.js">
+<link rel="modulepreload" href="/assets/controllers/index-dfefe98d.js">
+<link rel="modulepreload" href="/assets/controllers/list_autofill_controller-5f013171.js">
+<link rel="modulepreload" href="/assets/controllers/quote_reply_controller-3e6a21f7.js">
+<link rel="modulepreload" href="/assets/controllers/sticky_issue_header_controller-18502bbe.js">
+<script type="module">import "application"</script>
+<script src="/assets/jquery-3.7.1-ui-1.13.3-3ca148b8.js"></script>
+<script src="/assets/rails-ujs-3de06f48.js"></script>
+<script src="/assets/tribute-5.1.3.min-6c16c47a.js"></script><script src="/assets/tablesort-5.2.1.min-c6968762.js"></script>
+<script src="/assets/tablesort-5.2.1.number.min-8a47560b.js"></script><script src="/assets/application-legacy-54b0807d.js"></script>
+<script src="/assets/responsive-aa0cdb6f.js"></script>
+<script>
+//<![CDATA[
+$(window).on('load', function(){ warnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+<script src="/assets/themes/a1/theme-605a1f65.js"></script>
+<script>
+//<![CDATA[
+rm = window.rm || {};rm.I18n = rm.I18n || {};rm.I18n = Object.freeze({buttonCopy: 'Copy'});
+//]]>
+</script>
+<script>
+//<![CDATA[
+rm = window.rm || {};rm.AutoComplete = rm.AutoComplete || {};rm.AutoComplete.dataSources = JSON.parse('{"issues":"/issues/auto_complete?project_id=reportnet-3\u0026q=","wiki_pages":"/wiki_pages/auto_complete?project_id=reportnet-3\u0026q="}');
+//]]>
+</script>
+<script src="/assets/plugin_assets/redmineup/consumer-b505dfac.js"></script><script src="/assets/plugin_assets/redmineup/select2-38d92c05.js"></script><script src="/assets/plugin_assets/redmineup/select2_helpers-a6bf2ef6.js"></script><link rel="stylesheet" href="/assets/plugin_assets/redmineup/redmineup-9787b3cd.css" media="screen" />
+ <link rel="stylesheet" href="/assets/plugin_assets/redmine_agile/redmine_agile-a04398f2.css" media="screen" /> 
+ <link rel="stylesheet" href="/assets/plugin_assets/redmine_banner/banner-56192e7b.css" media="screen" /><script src="/assets/plugin_assets/redmine_banner/banner-eca76cc8.js"></script> <script src="/assets/plugin_assets/redmine_checklists/checklists-cf7f7381.js"></script><link rel="stylesheet" href="/assets/plugin_assets/redmine_checklists/checklists-98cc60f8.css" media="screen" />              <script type="text/javascript">//<![CDATA[
+                $(function() {
+                    if($(".mxgraph").length) {
+                        var script = document.createElement('script');
+                        script.src = 'https://drawio.eionet.europa.eu//js/viewer-static.min.js';
+                        document.head.append(script);
+                    }
+                });
+            //]]</script>
+ <link rel="stylesheet" href="/assets/plugin_assets/redmine_mermaid/mermaid-08d1572d.css" media="screen" />
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+// The browser cannot list this folder directly; the file list must be generated from Ruby/ERB.
+
+
+const iconPacks = [];
+
+console.log('[redmine_mermaid] iconPacks =', iconPacks);
+
+mermaid.registerIconPacks(
+  iconPacks.map(({ name, url }) => ({
+    name,
+    loader: async () => {
+      console.log(`[redmine_mermaid] cargando icon pack ${name} desde`, url);
+
+      const response = await fetch(url, { cache: 'force-cache' });
+
+      if (!response.ok) {
+        throw new Error(`No se pudo cargar el icon pack ${name}: HTTP ${response.status}`);
+      }
+
+      const json = await response.json();
+
+      console.log(
+        `[redmine_mermaid] icon pack ${name} cargado. prefix=`,
+        json.prefix,
+        'icons=',
+        json.icons ? Object.keys(json.icons).length : 0
+      );
+
+      return json;
+    },
+  }))
+);
+
+
+
+
+mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
+const MERMAID_CODE_SELECTOR = 'pre > code[data-language="mermaid"], pre > code.language-mermaid, pre > code.mermaid';
+const MERMAID_BLOCK_SELECTOR = 'pre.mermaid:not([data-processed]), div.mermaid:not([data-processed])';
+const TEXTILE_PRE_SELECTOR = '.wiki div.pre-wrapper > pre:not([data-processed])';
+const MERMAID_ANY_SELECTOR = [
+  MERMAID_CODE_SELECTOR,
+  MERMAID_BLOCK_SELECTOR,
+  TEXTILE_PRE_SELECTOR,
+].join(', ');
+
+let renderScheduled = false;
+let renderInProgress = false;
+let renderPending = false;
+
+function looksLikeMermaid(source) {
+  if (!source) return false;
+
+  const text = source.replace(/\r\n?/g, '\n').trim();
+  if (!text) return false;
+
+  const firstMeaningfulLine = text
+    .split('\n')
+    .map(function(line) { return line.trim(); })
+    .find(function(line) { return line.length > 0; });
+
+  if (!firstMeaningfulLine) return false;
+
+  return /^(graph|flowchart|sequenceDiagram|classDiagram|stateDiagram(?:-v2)?|erDiagram|journey|gantt|pie|gitGraph|mindmap|timeline|quadrantChart|requirementDiagram|C4Context|C4Container|C4Component|C4Dynamic|C4Deployment|packet|kanban|architecture)(\s|$)/.test(firstMeaningfulLine);
+}
+
+function collectMermaidNodes(scope) {
+  const nodes = [];
+  const root = scope || document;
+
+  // CommonMark/Textile code blocks: <pre><code ...>...</code></pre>
+  root.querySelectorAll(MERMAID_CODE_SELECTOR).forEach(function(code) {
+    const pre = code.parentElement;
+    pre.classList.add('mermaid');
+    pre.textContent = code.textContent;
+    nodes.push(pre);
+  });
+
+  // Textile: <pre class="mermaid"> ... </pre>
+  root.querySelectorAll('pre.mermaid:not([data-processed])').forEach(function(pre) {
+    nodes.push(pre);
+  });
+
+  // Standard mermaid.js: <div class="mermaid"> ... </div>
+  root.querySelectorAll('div.mermaid:not([data-processed])').forEach(function(div) {
+    nodes.push(div);
+  });
+
+  // Redmine Textile can strip class="mermaid" and render the block as a plain
+  // <div class="pre-wrapper"><pre>...</pre></div>. Detect only content that
+  // starts with a Mermaid diagram declaration to avoid hijacking regular code.
+  root.querySelectorAll(TEXTILE_PRE_SELECTOR).forEach(function(pre) {
+    if (!pre.classList.contains('mermaid') && looksLikeMermaid(pre.textContent)) {
+      pre.classList.add('mermaid');
+      nodes.push(pre);
+    }
+  });
+
+  return nodes;
+}
+
+async function renderMermaid(scope) {
+  if (renderInProgress) {
+    renderPending = true;
+    return;
+  }
+
+  const nodes = collectMermaidNodes(scope);
+  if (nodes.length === 0) return;
+
+  renderInProgress = true;
+  try {
+    await mermaid.run({ nodes: nodes });
+  } catch (error) {
+    console.error('redmine_mermaid: failed to render diagram(s)', error);
+  } finally {
+    renderInProgress = false;
+    if (renderPending) {
+      renderPending = false;
+      scheduleMermaidRender();
+    }
+  }
+}
+
+function scheduleMermaidRender(scope) {
+  if (renderScheduled) return;
+  renderScheduled = true;
+  requestAnimationFrame(function() {
+    renderScheduled = false;
+    renderMermaid(scope);
+  });
+}
+
+function containsMermaidContent(node) {
+  if (!node || node.nodeType !== Node.ELEMENT_NODE) return false;
+  if (node.matches && node.matches(MERMAID_ANY_SELECTOR)) return true;
+  return Boolean(node.querySelector && node.querySelector(MERMAID_ANY_SELECTOR));
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  scheduleMermaidRender();
+
+  const observer = new MutationObserver(function(mutations) {
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (containsMermaidContent(node)) {
+          scheduleMermaidRender();
+          return;
+        }
+      }
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Backup hooks for Redmine preview/tab updates that replace HTML asynchronously.
+  document.addEventListener('ajax:success', function() { scheduleMermaidRender(); });
+  document.addEventListener('turbo:load', function() { scheduleMermaidRender(); });
+});
+</script>
+ <link rel="stylesheet" href="/assets/plugin_assets/redmine_reporter/redmine_reporter-7222d08a.css" media="screen" /><script src="/assets/plugin_assets/redmine_reporter/redmine_reporter-9f7eaa70.js"></script> <link rel="stylesheet" href="/assets/plugin_assets/redmine_resources/redmine_resources-d5932457.css" media="screen" /> <link rel="stylesheet" href="/assets/plugin_assets/redmine_wiki_backlinks/wiki_links-8e577de4.css" media="screen" /> 
+ <link rel="stylesheet" href="/assets/plugin_assets/additionals/fontawesome-all.min-9f1514e5.css" media="screen" /><link rel="stylesheet" href="/assets/plugin_assets/additionals/additionals-16e779f0.css" media="screen" /><script src="/assets/plugin_assets/additionals/additionals-4f5a7ab4.js"></script><script>window.ADDITIONALS_I18N = window.ADDITIONALS_I18N || {};
+window.ADDITIONALS_I18N.goToTop = 'Go to top';</script><script src="/assets/plugin_assets/additionals/sticky_header_goto_top-b2720deb.js"></script> <link rel="stylesheet" href="/assets/plugin_assets/redmine_contacts_helpdesk/helpdesk-38d2bd90.css" media="screen" /> <link rel="stylesheet" href="/assets/plugin_assets/wiki_graphviz_plugin/wiki_graphviz-825aab28.css" media="all" />
+
+
+<!-- page specific tags -->
+    <link rel="stylesheet" href="/assets/scm-bd9fb4f2.css" media="screen" />  <link rel="stylesheet" href="/assets/plugin_assets/redmine_contacts/contacts-92af8c45.css" media="screen" />
+  <script src="/assets/plugin_assets/redmine_contacts/contacts-3a562d0a.js"></script>
+  <script src="/assets/plugin_assets/redmine_zenedit/textarea_caret_position-c12ab71d.js"></script>
+  
+  <script src="/assets/plugin_assets/redmine_zenedit/zenedit-4f3c45e2.js"></script>
+  <link rel="stylesheet" href="/assets/plugin_assets/redmine_zenedit/zenedit-b61f9d69.css" media="screen" />
+
+
+    <script src="/assets/plugin_assets/redmine_zenedit/zenedit_notifications_consumer-f38eddbf.js"></script>
+
+    <script type="text/javascript">
+      const notificationsConsumer = new zeneditNotificationsConsumer('wss://taskman.eionet.europa.eu/rup_cable_zenedit', '12')
+    </script>
+
+
+</head>
+<body class="theme-A1 project-reportnet-3 has-main-menu controller-attachments action-show avatars-on" data-text-formatting="textile">
+  <a id="gototop"></a>
+<div id="wrapper">
+
+<div class="flyout-menu js-flyout-menu">
+
+        <div class="flyout-menu__search">
+            <form action="/projects/reportnet-3/search" accept-charset="UTF-8" name="form-55019536" method="get">
+            
+            <label class="search-magnifier search-magnifier--flyout" for="flyout-search"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--search"></use></svg><span class="icon-label hidden">Search</span></label>
+            <input type="text" name="q" id="flyout-search" class="small js-search-input" placeholder="Search" />
+</form>        </div>
+
+        <div class="flyout-menu__avatar">
+          <a href="/users/12"><img alt="" title="Jan Bliki" class="gravatar avatar" srcset="https://www.gravatar.com/avatar/c7926bfd58ef822ebfc2d3bc3c972c753fa33a77a73e0bdaee82053769f187f2?rating=PG&amp;size=80&amp;default=wavatar 2x" src="https://www.gravatar.com/avatar/c7926bfd58ef822ebfc2d3bc3c972c753fa33a77a73e0bdaee82053769f187f2?rating=PG&amp;size=40&amp;default=wavatar" /></a>
+          <a class="user active" href="/users/12">bliki</a>
+        </div>
+
+        <h3>Project</h3>
+        <span class="js-project-menu"></span>
+
+    <h3>General</h3>
+    <span class="js-general-menu"></span>
+
+    <span class="js-sidebar flyout-menu__sidebar"></span>
+
+    <h3>Profile</h3>
+    <span class="js-profile-menu"></span>
+
+</div>
+
+
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a id="ai-helper-stuff-todo-link" style="display:none;" class="ai-helper-stuff-todo" href="#"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/plugin_assets/redmine_ai_helper/icons-40474639.svg#icon--ai-helper-robot"></use></svg><span class="icon-label">To Do</span></a></li><li><a class="my-account" href="/my/account">My account</a></li><li><a class="logout" rel="nofollow" data-method="post" href="/logout">Sign out</a></li></ul>    </div>
+    <div id="loggedas">Logged in as <a class="user active" href="/users/12">bliki</a></div>
+    <ul><li><a class="home" href="/">Home</a></li><li><a class="my-page" href="/my/page">My page</a></li><li><a class="projects" href="/projects">Projects</a></li><li><a class="contacts" href="/contacts">Contacts</a></li><li><a class="top-submenu external help" href="https://www.redmine.org/guide"><span aria-hidden="true" class="fas fa-question"></span></a></li></ul></div>
+
+<div id="header">
+
+    <a href="#" class="mobile-toggle-button js-flyout-menu-toggle-button"></a>
+
+    <div id="quick-search">
+        <form action="/projects/reportnet-3/search" accept-charset="UTF-8" name="form-36c8ecdb" method="get">
+        <input type="hidden" name="scope" value="subprojects" autocomplete="off" />
+        
+        <label for='q'>
+          <a accesskey="4" href="/projects/reportnet-3/search?scope=subprojects">Search</a>:
+        </label>
+        <input type="text" name="q" id="q" size="20" class="small" accesskey="f" data-auto-complete="true" />
+</form>        <div id="project-jump" class="drdn"><span class="drdn-trigger">Reportnet 3</span><div class="drdn-content"><div class="quick-search"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--search"></use></svg><input type="text" name="q" id="projects-quick-search" value="" class="autocomplete" data-automcomplete-url="/projects/autocomplete.js?jump=wiki" autocomplete="off" /></div><div class="drdn-items projects selection"><strong>Recently used</strong><a title="Reportnet 3" class="selected" href="/projects/reportnet-3?jump=wiki"><span style="padding-inline-start:0px;">Reportnet 3</span></a><a title="Public documentation" href="/projects/public-docs?jump=wiki"><span style="padding-inline-start:0px;">Public documentation</span></a><a title="Infrastructure" href="/projects/infrastructure?jump=wiki"><span style="padding-inline-start:0px;">Infrastructure</span></a><strong>All Projects</strong><a title="COM Team: Content management" href="/projects/content?jump=wiki"><span style="padding-inline-start:0px;">COM Team: Content management</span></a><a title="Content Development ISEs-Information Systems" href="/projects/mkl?jump=wiki"><span style="padding-inline-start:0px;">Content Development ISEs-Information Systems</span></a><a title="Data reporting and ETC tasks" href="/projects/data-flows?jump=wiki"><span style="padding-inline-start:0px;">Data reporting and ETC tasks</span></a><a title="Air Quality" href="/projects/airquality?jump=wiki"><span style="padding-inline-start:16px;">Air Quality</span></a><a title="Climate ADAPT Content Maintenance" href="/projects/climate-adapt-content?jump=wiki"><span style="padding-inline-start:16px;">Climate ADAPT Content Maintenance</span></a><a title="ETC-ATNI (ACM)" href="/projects/etc-acm?jump=wiki"><span style="padding-inline-start:16px;">ETC-ATNI (ACM)</span></a><a title="Action Plan 2016" href="/projects/action-plan-2016?jump=wiki"><span style="padding-inline-start:32px;">Action Plan 2016</span></a><a title="ETC-BD" href="/projects/etc-bd?jump=wiki"><span style="padding-inline-start:16px;">ETC-BD</span></a><a title="ETC-DI" href="/projects/etcdi?jump=wiki"><span style="padding-inline-start:16px;">ETC-DI</span></a><a title="ETC-ICM" href="/projects/etc-icm?jump=wiki"><span style="padding-inline-start:16px;">ETC-ICM</span></a><a title="ETC-ULS" href="/projects/etculs?jump=wiki"><span style="padding-inline-start:16px;">ETC-ULS</span></a><a title="GHG inventory and outreach" href="/projects/gptlac?jump=wiki"><span style="padding-inline-start:16px;">GHG inventory and outreach</span></a><a title="Observatory on Climate Change and Health - Content Maintenance" href="/projects/nanyz?jump=wiki"><span style="padding-inline-start:16px;">Observatory on Climate Change and Health - Content Maintenance</span></a><a title="Data representation" href="/projects/ses2-map-production-coordination-flows?jump=wiki"><span style="padding-inline-start:0px;">Data representation</span></a><a title="Digital" href="/projects/software?jump=wiki"><span style="padding-inline-start:0px;">Digital</span></a><a title=" DTL1" href="/projects/netpub?jump=wiki"><span style="padding-inline-start:16px;"> DTL1</span></a><a title="BCP" href="/projects/bcp?jump=wiki"><span style="padding-inline-start:32px;">BCP</span></a><a title="EUNIS " href="/projects/eunis?jump=wiki"><span style="padding-inline-start:32px;">EUNIS </span></a><a title="Infrastructure" href="/projects/infrastructure?jump=wiki"><span style="padding-inline-start:32px;">Infrastructure</span></a><a title="Change Management" href="/projects/cab?jump=wiki"><span style="padding-inline-start:48px;">Change Management</span></a><a title="Reportnet platform" href="/projects/reportnet-platform?jump=wiki"><span style="padding-inline-start:32px;">Reportnet platform</span></a><a title="Reportnet 2 and related applications" href="/projects/reportnet?jump=wiki"><span style="padding-inline-start:48px;">Reportnet 2 and related applications</span></a><a title="Reportnet 3" class="selected" href="/projects/reportnet-3?jump=wiki"><span style="padding-inline-start:48px;">Reportnet 3</span></a><a title="Web Development" href="/projects/nanyo?jump=wiki"><span style="padding-inline-start:32px;">Web Development</span></a><a title="A-Team" href="/projects/zope?jump=wiki"><span style="padding-inline-start:48px;">A-Team</span></a><a title="B-Team" href="/projects/nanzb?jump=wiki"><span style="padding-inline-start:48px;">B-Team</span></a><a title="BISE" href="/projects/biodiversity?jump=wiki"><span style="padding-inline-start:64px;">BISE</span></a><a title="Climate Advisory Board website" href="/projects/knowhuc?jump=wiki"><span style="padding-inline-start:64px;">Climate Advisory Board website</span></a><a title="Climate Change Adaptation" href="/projects/climateadapt?jump=wiki"><span style="padding-inline-start:64px;">Climate Change Adaptation</span></a><a title="Climate-Adapt Mission Portal" href="/projects/mkh?jump=wiki"><span style="padding-inline-start:64px;">Climate-Adapt Mission Portal</span></a><a title="WISE Freshwater" href="/projects/nanzc?jump=wiki"><span style="padding-inline-start:64px;">WISE Freshwater</span></a><a title="WISE Marine" href="/projects/wise-marine?jump=wiki"><span style="padding-inline-start:64px;">WISE Marine</span></a><a title="Eionet Tools, Portal and related legacy apps" href="/projects/naaya?jump=wiki"><span style="padding-inline-start:48px;">Eionet Tools, Portal and related legacy apps</span></a><a title="FISE Website" href="/projects/fise-dev?jump=wiki"><span style="padding-inline-start:48px;">FISE Website</span></a><a title="GenAI - AI Hub" href="/projects/gptlab?jump=wiki"><span style="padding-inline-start:48px;">GenAI - AI Hub</span></a><a title="Industrial emissions Website" href="/projects/eprtr?jump=wiki"><span style="padding-inline-start:48px;">Industrial emissions Website</span></a><a title=" DTL2 - Data Management" href="/projects/idm3-team?jump=wiki"><span style="padding-inline-start:16px;"> DTL2 - Data Management</span></a><a title="Bern Convention" href="/projects/nanye?jump=wiki"><span style="padding-inline-start:32px;">Bern Convention</span></a><a title="Birds Directive (Art. 12), Habitats Directive (Art. 17), IAS, Resolution 8" href="/projects/reh?jump=wiki"><span style="padding-inline-start:32px;">Birds Directive (Art. 12), Habitats Directive (Art. 17), IAS, Resolution 8</span></a><a title="CAMS22" href="/projects/cams22?jump=wiki"><span style="padding-inline-start:32px;">CAMS22</span></a><a title="CDDA" href="/projects/ief?jump=wiki"><span style="padding-inline-start:32px;">CDDA</span></a><a title="Climate and Health Observatory service" href="/projects/chobs?jump=wiki"><span style="padding-inline-start:32px;">Climate and Health Observatory service</span></a><a title="CWS and data procedures" href="/projects/cdc-development-plan?jump=wiki"><span style="padding-inline-start:32px;">CWS and data procedures</span></a><a title="Data visualization support" href="/projects/nanza?jump=wiki"><span style="padding-inline-start:32px;">Data visualization support</span></a><a title="DataHub" href="/projects/mobaqo?jump=wiki"><span style="padding-inline-start:32px;">DataHub</span></a><a title="Datahub2.0" href="/projects/sdi?jump=wiki"><span style="padding-inline-start:32px;">Datahub2.0</span></a><a title="Datahub2.0 AI integration" href="/projects/weuij?jump=wiki"><span style="padding-inline-start:48px;">Datahub2.0 AI integration</span></a><a title="Datahub2.0 Catalogue maintenance " href="/projects/gninspire?jump=wiki"><span style="padding-inline-start:48px;">Datahub2.0 Catalogue maintenance </span></a><a title="Datahub2.0 Data Lake house implementation" href="/projects/weuii?jump=wiki"><span style="padding-inline-start:48px;">Datahub2.0 Data Lake house implementation</span></a><a title="Datahub2.0 public website development" href="/projects/weuih?jump=wiki"><span style="padding-inline-start:48px;">Datahub2.0 public website development</span></a><a title="Datasets for SDI" href="/projects/datasets-for-sdi?jump=wiki"><span style="padding-inline-start:48px;">Datasets for SDI</span></a><a title="Dataset publication" href="/projects/dataset-publication?jump=wiki"><span style="padding-inline-start:32px;">Dataset publication</span></a><a title="Report generation" href="/projects/report-generation?jump=wiki"><span style="padding-inline-start:48px;">Report generation</span></a><a title="DiscoMap" href="/projects/mkj?jump=wiki"><span style="padding-inline-start:32px;">DiscoMap</span></a><a title="DiscoMap Helpdesk" href="/projects/mobaqj?jump=wiki"><span style="padding-inline-start:48px;">DiscoMap Helpdesk</span></a><a title="DTL2 Infrastructure" href="/projects/weuig?jump=wiki"><span style="padding-inline-start:32px;">DTL2 Infrastructure</span></a><a title="Environment and health Atlas" href="/projects/mobaqn?jump=wiki"><span style="padding-inline-start:32px;">Environment and health Atlas</span></a><a title="EUNIS2 database" href="/projects/nanyp?jump=wiki"><span style="padding-inline-start:32px;">EUNIS2 database</span></a><a title="EuroGEO" href="/projects/mobaqk?jump=wiki"><span style="padding-inline-start:32px;">EuroGEO</span></a><a title="Eurostat SLA" href="/projects/mkn?jump=wiki"><span style="padding-inline-start:32px;">Eurostat SLA</span></a><a title="FISE data and GIS applications" href="/projects/nanys?jump=wiki"><span style="padding-inline-start:32px;">FISE data and GIS applications</span></a><a title="Citizen science: MapMyTree" href="/projects/mobaql?jump=wiki"><span style="padding-inline-start:48px;">Citizen science: MapMyTree</span></a><a title="GIS Library" href="/projects/gislibrary?jump=wiki"><span style="padding-inline-start:32px;">GIS Library</span></a><a title="INSPIRE and e-Reporting" href="/projects/inspire_e_reporting?jump=wiki"><span style="padding-inline-start:32px;">INSPIRE and e-Reporting</span></a><a title="JEDI (Join Environmental Data Infrastructure)" href="/projects/jedi?jump=wiki"><span style="padding-inline-start:32px;">JEDI (Join Environmental Data Infrastructure)</span></a><a title="Marine" href="/projects/marine?jump=wiki"><span style="padding-inline-start:32px;">Marine</span></a><a title="Mission on Adaptation" href="/projects/knowhub?jump=wiki"><span style="padding-inline-start:32px;">Mission on Adaptation</span></a><a title="Mobile Air Quality Index App" href="/projects/mobaqi?jump=wiki"><span style="padding-inline-start:32px;">Mobile Air Quality Index App</span></a><a title="Natura 2000 backbone" href="/projects/mobaqm?jump=wiki"><span style="padding-inline-start:32px;">Natura 2000 backbone</span></a><a title="Natura2000" href="/projects/natura2000?jump=wiki"><span style="padding-inline-start:32px;">Natura2000</span></a><a title="Noise data and visualisation tool" href="/projects/weuib?jump=wiki"><span style="padding-inline-start:32px;">Noise data and visualisation tool</span></a><a title="Reportnet dataflows" href="/projects/reportnet-dataflows?jump=wiki"><span style="padding-inline-start:32px;">Reportnet dataflows</span></a><a title="Summer is coming" href="/projects/mkk?jump=wiki"><span style="padding-inline-start:32px;">Summer is coming</span></a><a title="Summer is coming 2026" href="/projects/weuif?jump=wiki"><span style="padding-inline-start:32px;">Summer is coming 2026</span></a><a title="UWWTD" href="/projects/nanyy?jump=wiki"><span style="padding-inline-start:32px;">UWWTD</span></a><a title="WISE" href="/projects/wise?jump=wiki"><span style="padding-inline-start:32px;">WISE</span></a><a title="WISE PUBLIC BUG TRACKER" href="/projects/wise-helpdesk?jump=wiki"><span style="padding-inline-start:48px;">WISE PUBLIC BUG TRACKER</span></a><a title="WISE SoE" href="/projects/wise-soe?jump=wiki"><span style="padding-inline-start:48px;">WISE SoE</span></a><a title="WISE SoW" href="/projects/wise-sow?jump=wiki"><span style="padding-inline-start:48px;">WISE SoW</span></a><a title="DTL3 - Earth Observation" href="/projects/iee?jump=wiki"><span style="padding-inline-start:16px;">DTL3 - Earth Observation</span></a><a title="CLCPlus Core" href="/projects/weuia?jump=wiki"><span style="padding-inline-start:32px;">CLCPlus Core</span></a><a title="CLMS GeoIT support" href="/projects/cac?jump=wiki"><span style="padding-inline-start:32px;">CLMS GeoIT support</span></a><a title="CLMS portal User support" href="/projects/nanyv?jump=wiki"><span style="padding-inline-start:32px;">CLMS portal User support</span></a><a title="CLMS QC tool" href="/projects/weuic?jump=wiki"><span style="padding-inline-start:32px;">CLMS QC tool</span></a><a title="CLMS website operations" href="/projects/mkp?jump=wiki"><span style="padding-inline-start:32px;">CLMS website operations</span></a><a title="Copernicus In Situ Database" href="/projects/gisc?jump=wiki"><span style="padding-inline-start:32px;">Copernicus In Situ Database</span></a><a title="Copernicus in-situ website" href="/projects/mko?jump=wiki"><span style="padding-inline-start:32px;">Copernicus in-situ website</span></a><a title="CORDA - Copernicus Reference Data Access" href="/projects/corda?jump=wiki"><span style="padding-inline-start:32px;">CORDA - Copernicus Reference Data Access</span></a><a title="GEMET" href="/projects/gemet?jump=wiki"><span style="padding-inline-start:32px;">GEMET</span></a><a title="INSPIRE implementation for CDDA" href="/projects/inspire-implementation-for-cdda?jump=wiki"><span style="padding-inline-start:32px;">INSPIRE implementation for CDDA</span></a><a title="INSPIRE-Land" href="/projects/inspire-land?jump=wiki"><span style="padding-inline-start:32px;">INSPIRE-Land</span></a><a title="Test project" href="/projects/mkm?jump=wiki"><span style="padding-inline-start:32px;">Test project</span></a><a title="PARC website" href="/projects/knowhud?jump=wiki"><span style="padding-inline-start:0px;">PARC website</span></a></div><div class="drdn-items all-projects selection"><a href="/projects?jump=wiki">All Projects</a></div></div></div>
+    </div>
+
+    <h1><span class="breadcrumbs"><a class="root" href="/projects/software?jump=wiki">Digital</a><span class="separator"> &raquo; </span><a class="ancestor" href="/projects/netpub?jump=wiki"> DTL1</a><span class="separator"> &raquo; </span><a class="ancestor" href="/projects/reportnet-platform?jump=wiki">Reportnet platform</a><span class="separator"> &raquo; </span></span><span class="current-project">Reportnet 3</span></h1>
+
+    <div id="main-menu" class="tabs">
+        <ul><li>
+<a onclick="toggleNewObjectDropdown(); return false;" id="new-object" class="new-object" href="#"> + </a>
+<ul class="menu-children"><li><a accesskey="7" class="new-issue-sub" href="/projects/reportnet-3/issues/new">New issue</a></li><li><a class="new-issue-category" href="/projects/reportnet-3/issue_categories/new">New category</a></li><li><a class="new-version" href="/projects/reportnet-3/versions/new">New version</a></li><li><a class="new-timelog" href="/projects/reportnet-3/time_entries/new">Log time</a></li><li><a class="new-news" href="/projects/reportnet-3/news/new">Add news</a></li><li><a class="new-wiki-page" href="/projects/reportnet-3/wiki/new">New wiki page</a></li></ul>
+</li><li><a class="overview" href="/projects/reportnet-3">Overview</a></li><li><a class="activity" href="/projects/reportnet-3/activity">Activity</a></li><li><a class="roadmap" href="/projects/reportnet-3/roadmap">Roadmap</a></li><li><a class="issues" href="/projects/reportnet-3/issues">Issues</a></li><li><a class="time-entries" href="/projects/reportnet-3/time_entries">Spent time</a></li><li><a class="gantt" href="/projects/reportnet-3/issues/gantt">Gantt</a></li><li><a class="agile" href="/projects/reportnet-3/agile/board">Agile</a></li><li><a class="calendar" href="/projects/reportnet-3/issues/calendar">Calendar</a></li><li><a class="news" href="/projects/reportnet-3/news">News</a></li><li><a class="wiki selected" href="/projects/reportnet-3/wiki">Wiki</a></li><li><a class="settings" href="/projects/reportnet-3/settings">Settings</a></li></ul>
+        <div class="tabs-buttons" style="display:none;">
+            <button class="tab-left icon-only" onclick="moveTabLeft(this); return false;">
+              <svg class="s18 icon-svg icon-rtl" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--angle-left"></use></svg>
+            </button>
+            <button class="tab-right icon-only" onclick="moveTabRight(this); return false;">
+              <svg class="s18 icon-svg icon-rtl" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--angle-right"></use></svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="main" class="nosidebar">
+  
+    <div id="sidebar">
+        <div id="sidebar-wrapper">
+          
+          
+        </div>
+    </div>
+
+    <div id="content">
+        
+        <div class="contextual">
+  <a class="icon icon-download" href="/attachments/download/154603/add_new_provider.PNG"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--download"></use></svg><span class="icon-label">Download (6.15 KB)</span></a></div>
+
+<h2>
+  <a href="/projects/reportnet-3/wiki/Add_provider_to_dataflow">Add provider to dataflow</a> » add_new_provider.PNG
+</h2>
+
+<div class="attachments">
+<p>
+   <span class="author"><a class="user active" href="/users/25799">KOURETAS Fotios</a>, 2022-09-05 13:44</span></p>
+</div>
+<div class="filecontent-container">
+  
+  <img alt="add_new_provider.PNG" class="filecontent image" src="/attachments/download/154603/add_new_provider.PNG" />
+
+
+</div>
+
+<span class="pagination filepreview">
+  <ul class="pages"></ul><span><span class="items">(1-1/1)</span> </span>
+</span>
+
+
+
+         <div class="gototop"><a class="icon icon-page-up" href="#gototop"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/plugin_assets/additionals/icons-ad5bfd1b.svg#icon--page-up"></use></svg><span class="icon-label">Go to top</span></a></div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<div id="footer">
+    Powered by <a target="_blank" rel="noopener" href="https://www.redmine.org/">Redmine</a> &copy; 2006-2026 Jean-Philippe Lang
+</div>
+
+<div id="ajax-indicator" style="display:none;">
+  <span class="icon">
+    <svg class="s18 icon-svg svg-loader" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--loader"></use></svg><span class="icon-label">Loading...</span>
+  </span>
+</div>
+<div id="ajax-modal" style="display:none;"></div>
+<div id="icon-copy-source" style="display: none;"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/icons-a9735328.svg#icon--"></use></svg></div>
+
+</div>
+
+
+<!-- AI Helper wiki auto-completion not available -->
+
+<!-- Hidden templates for typo check buttons -->
+<div id="ai-helper-typo-button-templates" style="display: none;">
+  <button type="button" class="ai-helper-typo-accept-btn-template"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/plugin_assets/redmine_ai_helper/icons-40474639.svg#icon--ai-helper-check"></use></svg></button>
+  <button type="button" class="ai-helper-typo-reject-btn-template"><svg class="s18 icon-svg" aria-hidden="true"><use href="/assets/plugin_assets/redmine_ai_helper/icons-40474639.svg#icon--ai-helper-x"></use></svg></button>
+</div>
+  <script>
+//<![CDATA[
+setSelect2Filter('contact', {"format_state":"formatStateWithAvatar","min_input_length":1,"url":"/auto_completes/contacts"});
+//]]>
+</script>
+
+<script>
+//<![CDATA[
+setSelect2Filter('company', {"format_state":"formatStateWithAvatar","min_input_length":1,"url":"/auto_completes/contacts?is_company=true"});
+//]]>
+</script>
+<script>
+//<![CDATA[
+setSelect2Filter('deal', {"format_state":"formatStateWithAvatar","min_input_length":1,"url":"/auto_completes/deals"});
+//]]>
+</script>
+
+<script>
+//<![CDATA[
+setSelect2Filter('contact_tags', {"url":"/auto_completes/taggable_tags?project_id=reportnet-3\u0026taggable_type=Contact"});
+//]]>
+</script>
+ <div id="dlg_redmine_drawio" title="Define diagram" style="display:none">
+  <form id="drawio_form">
+    <input type="hidden" name="authenticity_token" id="authenticity_token" value="tyhNpX5X5AsSdQsFC-Yo1jO3ZMIfUXOnqYzUm5YqNMz9sOIaJXQ1xZGOJxSB8I_F_5CeEAXJk42tZBUikfFwUQ" autocomplete="off" />
+    <fieldset>
+      <div class="tabular">
+        <p>
+          <label for="drawio__P1">Diagram name <span class="required">*</span></label>
+          <input type="text" name="drawio__P1" id="drawio__P1" size="32"/>
+        </p>
+        <p>
+          <label for="drawio_diagType">Diagram format</label>
+          <input type="radio" name="drawio_diagType" value="png" data-default="png"/>PNG
+
+          <input type="radio" name="drawio_diagType" value="svg" style="margin-left:1em"/>SVG
+          <input type="radio" name="drawio_diagType" value="xml" style="margin-left:1em" id="drawio_diagTypeXml"/>XML
+          <input type="radio" name="drawio_diagType" value="drawio" style="margin-left:1em" id="drawio_diagTypeDrawio"/>DRAWIO
+        </p>
+        <p>
+          <label for="drawio_size">Width</label>
+          <input type="number" name="drawio_size" id="drawio_size" class="digits" 
+                 min="1" size="4" maxlength="4"/> pixel
+        </p>
+      </div>
+    </fieldset>
+    <fieldset id="drawio_xml_params" style="display: none">
+      <div class="tabular">
+        <p>
+          <label for="drawio_tbautohide">Hide toolbar</label>
+          <input type="checkbox" name="drawio_tbautohide" id="drawio_tbautohide" data-default="true"/>
+        </p>
+        <p>
+          <label for="drawio_lightbox">Use LightBox</label>
+          <input type="checkbox" name="drawio_lightbox" id="drawio_lightbox" data-default="false"/>
+        </p>
+        <p>
+          <label for="drawio_zoom">Zoom controls</label>
+          <input type="checkbox" name="drawio_zoom" id="drawio_zoom" data-default="false"/>
+        </p>
+        <p>
+          <label for="drawio_initialzoom">Initial zoom</label>
+          <input type="number" name="drawio_initialzoom" id="drawio_initialzoom" class="digits"
+                 size="5" maxLength="3" min="1" data-default="100"/> %
+        </p>
+        <p>
+          <label for="drawio_page">Initial page</label>
+          <input type="text" name="drawio_page" id="drawio_page"/>
+        </p>
+        <p>
+          <label for="drawio_layers">Inizial layers</label>
+          <input type="text" name="drawio_layers" id="drawio_layers"/>
+        </p>
+        <p>
+          <label for="drawio_hilight">Hyperlinks color</label>
+          <input type="text" name="drawio_hilight" id="drawio_hilight" data-default="#0000ff"/>
+        </p>
+      </div>
+    </fieldset>
+  </form>
+</div>
+  
+ <div class="additionals-footer"><p><a class="wiki-page" href="/projects/public-docs/wiki/Taskman_Changelog">Taskman Changelog</a> | <a href="https://status.eea.europa.eu" class="external">Systems Status</a> | <a href="https://www.eionet.europa.eu/about/helpdesk" class="external">ServiceDesk</a> | <a href="https://www.eea.europa.eu/legal/privacy" class="external">Data Protection Notice</a></p></div><script>$(function() {
+  $('a.help').parent().append("<ul class=\"menu-children\"><li><a class=\"help_item_agile external\" target=\"_blank\" href=\"https://www.redmineup.com/pages/help/agile\">Redmine Agile<\/a><\/li><li><a class=\"help_item_redmine_guide external\" target=\"_blank\" href=\"https://www.redmine.org/guide\">Redmine Guide<\/a><\/li><li><a class=\"help_item_macros\" href=\"/help/macros\">Redmine Macros<\/a><\/li><li><a class=\"help_item_drawio external\" target=\"_blank\" href=\"https://github.com/mikitex70/redmine_drawio#usage\">draw.io usage<\/a><\/li><\/ul>");
+});</script> <script>
+//<![CDATA[
+setSelect2Filter('assignee', {"url":"/auto_completes/assignee?project_id=reportnet-3","multiple":true});
+//]]>
+</script>
+
+</body>
+</html>

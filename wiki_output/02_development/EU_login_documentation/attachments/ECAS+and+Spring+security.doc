@@ -1,0 +1,506 @@
+Message-ID: <1916162863.97700.1566381377652.JavaMail.studio@pelargonium.cc.cec.eu.int>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_97699_1585232815.1566381377643"
+
+------=_Part_97699_1585232815.1566381377643
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>ECAS and Spring security</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>ECAS and Spring security</h1>
+    <div class=3D"Section1">
+        <p>Spring security and ECAS can work together, in that case ECAS wi=
+ll be used for authentication and Spring for Authorisation (The recommended=
+ authorisation system in the Commission is ULYSSE <a href=3D"/CITnet/conflu=
+ence/display/RefApp/RefApp+Ulysse+connector">RefApp Ulysse connector</a>.)<=
+/p>
+<p>For configure one application for use spring security with ECAS you can =
+follow the steps:</p>
+<ul>
+<li>First install the <a href=3D"https://webgate.ec.europa.eu/CITnet/conflu=
+ence/display/IAM/Downloads-WebLogic" rel=3D"nofollow">ECAS authentication p=
+rovider</a>.</li>
+<li>Add to the application the spring security dependencies:</li>
+</ul>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: html/xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">&lt=
+;dependency&gt;
+    &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-security-core&lt;/artifactId&gt;
+    &lt;version&gt;${spring.version}&lt;/version&gt;
+&lt;/dependency&gt;</pre>=20
+</div>
+</div>
+<ul>
+<li>Add the refapp-support-security-ecas-file, this will add the authentica=
+ted syntetic role</li>
+</ul>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: html/xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">&lt=
+;dependency&gt;
+       &lt;groupId&gt;eu.europa.ec.digit&lt;/groupId&gt;
+       &lt;artifactId&gt;refapp-support-security-ecas-file&lt;/artifactId&g=
+t;
+       &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>=20
+</div>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li>Add the spring security configuration in the web.xml (regular configura=
+tion of spring-security)</li>
+<li>Add the ECAS configuration in the web.xml</li>
+</ul>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: html/xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">   =
+ &lt;!-- ECAS security --&gt;
+    &lt;!-- Here we specify which URLs are protected by ECAS and which appl=
+ication server role is used.--&gt;=20
+    &lt;security-constraint&gt;
+        &lt;web-resource-collection&gt;
+            &lt;web-resource-name&gt;refapp-uls-sampleappWeb&lt;/web-resour=
+ce-name&gt;
+            &lt;description&gt;Require users to authenticate&lt;/descriptio=
+n&gt;
+            &lt;url-pattern&gt;*.jsp&lt;/url-pattern&gt;
+            &lt;url-pattern&gt;*.html&lt;/url-pattern&gt;
+            &lt;url-pattern&gt;*.htm&lt;/url-pattern&gt;
+            &lt;url-pattern&gt;/data/*&lt;/url-pattern&gt;
+            &lt;url-pattern&gt;*.do&lt;/url-pattern&gt;
+        &lt;/web-resource-collection&gt;
+        &lt;auth-constraint&gt;
+            &lt;description&gt;ensures that the principal is authenticated&=
+lt;/description&gt;
+            &lt;role-name&gt;authenticated&lt;/role-name&gt;
+        &lt;/auth-constraint&gt;
+        &lt;user-data-constraint&gt;
+            &lt;description&gt;Encryption is not required for the applicati=
+on in general.&lt;/description&gt;
+            &lt;transport-guarantee&gt;NONE&lt;/transport-guarantee&gt;
+        &lt;/user-data-constraint&gt;
+    &lt;/security-constraint&gt;
+    &lt;!-- Here we specify the ECAS login action URL (called after success=
+ful ECAS login) and the ECAS error action URL.--&gt;=20
+    &lt;login-config&gt;
+        &lt;auth-method&gt;FORM&lt;/auth-method&gt;
+        &lt;realm-name&gt;myrealm&lt;/realm-name&gt;
+        &lt;form-login-config&gt;
+            &lt;form-login-page&gt;/protected/login&lt;/form-login-page&gt;
+            &lt;form-error-page&gt;/protected/ecasError&lt;/form-error-page=
+&gt;
+        &lt;/form-login-config&gt;
+    &lt;/login-config&gt;
+    &lt;security-role&gt;
+        &lt;description&gt;Syntetic role that indicates if the principal is=
+ authenticated&lt;/description&gt;
+        &lt;role-name&gt;authenticated&lt;/role-name&gt;
+    &lt;/security-role&gt;
+
+</pre>=20
+</div>
+</div>
+<ul>
+<li><p>In the weblogic.xml<br><br></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: html/xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">   =
+ &lt;!-- ECAS security --&gt;
+    &lt;!-- Synthetic group/role to indicate if a user is authenticated --&=
+gt;
+    &lt;security-role-assignment&gt;
+        &lt;role-name&gt;authenticated&lt;/role-name&gt;
+        &lt;principal-name&gt;authenticated&lt;/principal-name&gt;
+    &lt;/security-role-assignment&gt;
+    &lt;!-- Only needed if you want to allow some resources to be accessed =
+by authenticated=20
+        users who do not possess any role --&gt;
+    &lt;container-descriptor&gt;
+        &lt;allow-all-roles&gt;true&lt;/allow-all-roles&gt;
+    &lt;/container-descriptor&gt;
+
+</pre>=20
+</div>
+</div></li>
+</ul>
+<ul>
+<li>Add the spring-security.xml with the configuration:</li>
+</ul>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: html/xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">   =
+  &lt;!-- J2EE pre-authentication --&gt;
+    &lt;bean id=3D"jeePreAuthenticatedFilter"
+        class=3D"org.springframework.security.web.authentication.preauth.j2=
+ee.J2eePreAuthenticatedProcessingFilter"&gt;
+        &lt;property name=3D"authenticationManager" ref=3D"authenticationMa=
+nager" /&gt;
+        &lt;property name=3D"continueFilterChainOnUnsuccessfulAuthenticatio=
+n" value=3D"false" /&gt;       =20
+    &lt;/bean&gt;
+
+    &lt;security:authentication-manager alias=3D"authenticationManager"&gt;
+        &lt;security:authentication-provider
+            ref=3D"preauthAuthProvider" /&gt;
+    &lt;/security:authentication-manager&gt;
+
+    &lt;bean id=3D"preauthAuthProvider"
+        class=3D"org.springframework.security.web.authentication.preauth.Pr=
+eAuthenticatedAuthenticationProvider"&gt;
+        &lt;property name=3D"preAuthenticatedUserDetailsService"&gt;
+            &lt;bean id=3D"userDetailsServiceWrapper"
+                class=3D"org.springframework.security.core.userdetails.User=
+DetailsByNameServiceWrapper"&gt;
+                &lt;property name=3D"userDetailsService" ref=3D"userDetails=
+Service" /&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+
+    &lt;bean id=3D"userDetailsService"
+        class=3D"eu.europa.ec.....MyUserDetailsBuilderServiceImpl"&gt;
+    &lt;/bean&gt;</pre>=20
+</div>
+</div>
+<p>And the class <strong>MyUserDetailsBuilderServiceImpl</strong></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">import =
+java.security.Principal;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import javax.security.auth.Subject;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundExcept=
+ion;
+public class MyUserDetailsBuilderServiceImpl implements UserDetailsBuilderS=
+ervice {
+    @Override
+    public UserDetails loadUserByUsername(String username) {
+        try {
+            List&lt;GrantedAuthority&gt; userGroups =3D new LinkedList&lt;G=
+rantedAuthority&gt;();
+            String userId =3D null; // TODO retrieve the userId
+            if (existsClass("weblogic.security.Security")) {
+                Subject subject =3D (Subject) Class.forName("weblogic.secur=
+ity.Security")
+                        .getMethod("getCurrentSubject", null).invoke(null, =
+null);
+                Set&lt;Principal&gt; principals =3D subject.getPrincipals()=
+;
+                for (Principal principal : principals) {
+                    if (Class.forName("weblogic.security.spi.WLSGroup").isI=
+nstance(principal)) {
+                        userGroups.add(new GrantedAuthorityImpl(principal.g=
+etName()));
+                    }
+                }
+                // TODO in the principals we can obtain all the data of the
+                // user:
+                /*
+                 * Set&lt;WLSUser&gt; wlsUsers =3D subject.getPrincipals(WL=
+SUser.class);
+                 * if (!wlsUsers.isEmpty()) { WLSUser user =3D
+                 * wlsUsers.iterator().next(); String uid =3D user.getName(=
+);
+                 */
+            }
+            if (userId =3D=3D null) {
+                throw new UsernameNotFoundException("Cannot retrieve the us=
+erDetails");
+            }
+            return new User(userId, null, true, true, true, true, userGroup=
+s);
+        } catch (Exception ex) {
+            if (ex instanceof UsernameNotFoundException) {
+                throw (UsernameNotFoundException) ex;
+            } else
+                throw new UsernameNotFoundException("Cannot retrieve the us=
+erDetails", ex);
+        }
+    }
+    public boolean existsClass(String claszzName) {
+        boolean exists =3D true;
+        try {
+            Class.forName(claszzName, false, getClass().getClassLoader());
+        } catch (ClassNotFoundException e) {
+            exists =3D false;
+        }
+        return exists;
+    }
+}</pre>=20
+</div>
+</div>
+<ul>
+<li><p>Finally is important in the configuration of the security:http confi=
+g add the parameter:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: html/xml; gutter: false; theme: Confluence" data-theme=3D"Confluence">&lt=
+;security:http auto-config=3D"true" use-expressions=3D"true"&gt;
+
+    &lt;security:custom-filter after=3D"PRE_AUTH_FILTER" ref=3D"jeePreAuthe=
+nticatedFilter"/&gt;
+    &lt;security:session-management session-fixation-protection=3D"none"&gt=
+; &lt;/security:session-management&gt;
+    ..
+&lt;/security:http&gt; </pre>=20
+</div>
+</div><p><br>With the PRE_AUTH_FILTER is set that the authentication is don=
+e by a jee filter.</p></li>
+<li>The session management fixation is important, if is not as "none" sprin=
+g invalidates the current session and creates a new one, and all the mechan=
+isms of ECAS doesn't work.</li>
+</ul>
+<div class=3D"confluence-information-macro confluence-information-macro-inf=
+ormation">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-info confluence-informa=
+tion-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>A working example can be downloaded in the svn: <a href=3D"https://webga=
+te.ec.europa.eu/CITnet/svn/REFAPPSDBX/security/ecas/refappSpringSecurityEca=
+sSample" class=3D"external-link" rel=3D"nofollow">REFAPPSDBX/security/ecas/=
+refappSpringSecurityEcasSample</a></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    </div>
+</body>
+</html>
+------=_Part_97699_1585232815.1566381377643--

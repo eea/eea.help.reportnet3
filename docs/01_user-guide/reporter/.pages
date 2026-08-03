@@ -1,0 +1,8 @@
+title: Reporter
+nav:
+  - index.md
+  - Dataflows overview page: dataflows-overview-page.md
+  - Dataflow home page: dataflow-home-page
+  - Submit data: submit-data
+  - Validate data: validate-data
+  - Release data: release-data

@@ -1,0 +1,10 @@
+title: Submit data
+nav:
+  - index.md
+  - Dataset actions: dataset-actions.md
+  - Table actions: table-actions.md
+  - Manage records: manage-records.md
+  - Webform data input: webform-data-input.md
+  - Manage dataset copies: manage-dataset-copies.md
+  - Spatial data: spatial-data
+  - Create CSV-files: create-csv-files.md

@@ -1,0 +1,8 @@
+title: User guide
+nav:
+  - General: general
+  - Reporter: reporter
+  - Requester: requester
+  - Preparation datasets: preparation-datasets.md
+  - Webforms: webforms.md
+  - Rest API: rest-api

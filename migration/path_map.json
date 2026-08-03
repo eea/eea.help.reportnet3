@@ -1,0 +1,1043 @@
+{
+  "docs_root": "docs/01_user-guide",
+  "counts": {
+    "pages": 61,
+    "aliases": 3,
+    "unplaced_orphans": 2
+  },
+  "entries": [
+    {
+      "title": "General",
+      "old_path": "/",
+      "old_url": "https://help.reportnet.europa.eu/",
+      "new_path": "docs/01_user-guide/general/index.md",
+      "parent_dir": "docs/01_user-guide",
+      "nav_entry": "general/",
+      "order": 0,
+      "depth": 0,
+      "breadcrumb": [
+        "General"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 153
+    },
+    {
+      "title": "What’s new",
+      "old_path": "/general/whats-new/",
+      "old_url": "https://help.reportnet.europa.eu/general/whats-new/",
+      "new_path": "docs/01_user-guide/general/whats-new.md",
+      "parent_dir": "docs/01_user-guide/general",
+      "nav_entry": "whats-new.md",
+      "order": 0,
+      "depth": 1,
+      "breadcrumb": [
+        "General",
+        "What’s new"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 499
+    },
+    {
+      "title": "Reportnet platforms",
+      "old_path": "/general/different-platforms/",
+      "old_url": "https://help.reportnet.europa.eu/general/different-platforms/",
+      "new_path": "docs/01_user-guide/general/reportnet-platforms.md",
+      "parent_dir": "docs/01_user-guide/general",
+      "nav_entry": "reportnet-platforms.md",
+      "order": 1,
+      "depth": 1,
+      "breadcrumb": [
+        "General",
+        "Reportnet platforms"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 149
+    },
+    {
+      "title": "Login to Reportnet",
+      "old_path": "/general/get-access/",
+      "old_url": "https://help.reportnet.europa.eu/general/get-access/",
+      "new_path": "docs/01_user-guide/general/login-to-reportnet/index.md",
+      "parent_dir": "docs/01_user-guide/general",
+      "nav_entry": "login-to-reportnet/",
+      "order": 2,
+      "depth": 1,
+      "breadcrumb": [
+        "General",
+        "Login to Reportnet"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 148
+    },
+    {
+      "title": "Create an EU-Login account",
+      "old_path": "/general/get-access/login/",
+      "old_url": "https://help.reportnet.europa.eu/general/get-access/login/",
+      "new_path": "docs/01_user-guide/general/login-to-reportnet/create-an-eu-login-account.md",
+      "parent_dir": "docs/01_user-guide/general/login-to-reportnet",
+      "nav_entry": "create-an-eu-login-account.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "General",
+        "Login to Reportnet",
+        "Create an EU-Login account"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 60
+    },
+    {
+      "title": "Link my EU-login",
+      "old_path": "/general/get-access/you-have-an-eu-login/",
+      "old_url": "https://help.reportnet.europa.eu/general/get-access/you-have-an-eu-login/",
+      "new_path": "docs/01_user-guide/general/login-to-reportnet/link-my-eu-login.md",
+      "parent_dir": "docs/01_user-guide/general/login-to-reportnet",
+      "nav_entry": "link-my-eu-login.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "General",
+        "Login to Reportnet",
+        "Link my EU-login"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 90
+    },
+    {
+      "title": "About Multi Factor Authentication (MFA)",
+      "old_path": "/general/get-access/multi-factor-authentication-for-eu-login/",
+      "old_url": "https://help.reportnet.europa.eu/general/get-access/multi-factor-authentication-for-eu-login/",
+      "new_path": "docs/01_user-guide/general/login-to-reportnet/multi-factor-authentication.md",
+      "parent_dir": "docs/01_user-guide/general/login-to-reportnet",
+      "nav_entry": "multi-factor-authentication.md",
+      "order": 2,
+      "depth": 2,
+      "breadcrumb": [
+        "General",
+        "Login to Reportnet",
+        "About Multi Factor Authentication (MFA)"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 103
+    },
+    {
+      "title": "User settings",
+      "old_path": "/general/my-global-settings/",
+      "old_url": "https://help.reportnet.europa.eu/general/my-global-settings/",
+      "new_path": "docs/01_user-guide/general/user-settings/index.md",
+      "parent_dir": "docs/01_user-guide/general",
+      "nav_entry": "user-settings/",
+      "order": 3,
+      "depth": 1,
+      "breadcrumb": [
+        "General",
+        "User settings"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 156
+    },
+    {
+      "title": "Privacy policy",
+      "old_path": "/general/my-global-settings/privacy-policy/",
+      "old_url": "https://help.reportnet.europa.eu/general/my-global-settings/privacy-policy/",
+      "new_path": "docs/01_user-guide/general/user-settings/privacy-policy.md",
+      "parent_dir": "docs/01_user-guide/general/user-settings",
+      "nav_entry": "privacy-policy.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "General",
+        "User settings",
+        "Privacy policy"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 316
+    },
+    {
+      "title": "Reporter",
+      "old_path": "/reportnet-3-1-reporter-howto/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/",
+      "new_path": "docs/01_user-guide/reporter/index.md",
+      "parent_dir": "docs/01_user-guide",
+      "nav_entry": "reporter/",
+      "order": 1,
+      "depth": 0,
+      "breadcrumb": [
+        "Reporter"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 58
+    },
+    {
+      "title": "Dataflows overview page",
+      "old_path": "/reportnet-3-1-reporter-howto/dataflow/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/dataflow/",
+      "new_path": "docs/01_user-guide/reporter/dataflows-overview-page.md",
+      "parent_dir": "docs/01_user-guide/reporter",
+      "nav_entry": "dataflows-overview-page.md",
+      "order": 0,
+      "depth": 1,
+      "breadcrumb": [
+        "Reporter",
+        "Dataflows overview page"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 63
+    },
+    {
+      "title": "Dataflow home page",
+      "old_path": "/reportnet-3-1-reporter-howto/dataflows/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/dataflows/",
+      "new_path": "docs/01_user-guide/reporter/dataflow-home-page/index.md",
+      "parent_dir": "docs/01_user-guide/reporter",
+      "nav_entry": "dataflow-home-page/",
+      "order": 1,
+      "depth": 1,
+      "breadcrumb": [
+        "Reporter",
+        "Dataflow home page"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 59
+    },
+    {
+      "title": "How to add supporting reporters to my dataflow",
+      "old_path": "/how-to-add-supporting-reporters-to-my-dataflow/",
+      "old_url": "https://help.reportnet.europa.eu/how-to-add-supporting-reporters-to-my-dataflow/",
+      "new_path": "docs/01_user-guide/reporter/dataflow-home-page/add-supporting-reporters.md",
+      "parent_dir": "docs/01_user-guide/reporter/dataflow-home-page",
+      "nav_entry": "add-supporting-reporters.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Dataflow home page",
+        "How to add supporting reporters to my dataflow"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 899
+    },
+    {
+      "title": "Dataflow specific help",
+      "old_path": "/reportnet-3-1-reporter-howto/dataflows/dataflow-help-specific/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/dataflows/dataflow-help-specific/",
+      "new_path": "docs/01_user-guide/reporter/dataflow-home-page/dataflow-specific-help.md",
+      "parent_dir": "docs/01_user-guide/reporter/dataflow-home-page",
+      "nav_entry": "dataflow-specific-help.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Dataflow home page",
+        "Dataflow specific help"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 293
+    },
+    {
+      "title": "Submit data",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/index.md",
+      "parent_dir": "docs/01_user-guide/reporter",
+      "nav_entry": "submit-data/",
+      "order": 2,
+      "depth": 1,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 243
+    },
+    {
+      "title": "Dataset actions",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/dataset-operations/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/dataset-operations/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/dataset-actions.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "dataset-actions.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Dataset actions"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 253
+    },
+    {
+      "title": "Table actions",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/table-actions/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/table-actions/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/table-actions.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "table-actions.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Table actions"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 284
+    },
+    {
+      "title": "Manage records",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/submit-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/submit-data/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/manage-records.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "manage-records.md",
+      "order": 2,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Manage records"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 270
+    },
+    {
+      "title": "Webform data input",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/web-form-data-input/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/web-form-data-input/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/webform-data-input.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "webform-data-input.md",
+      "order": 3,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Webform data input"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1044
+    },
+    {
+      "title": "Manage dataset copies",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/submit-data/manage-dataset-copies/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/submit-data/manage-dataset-copies/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/manage-dataset-copies.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "manage-dataset-copies.md",
+      "order": 4,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Manage dataset copies"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1039
+    },
+    {
+      "title": "Spatial data",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/spatial-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/spatial-data/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/spatial-data/index.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "spatial-data/",
+      "order": 5,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Spatial data"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 303
+    },
+    {
+      "title": "Geospatial Data Features",
+      "old_path": "/geospatial-data-features/",
+      "old_url": "https://help.reportnet.europa.eu/geospatial-data-features/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/spatial-data/geospatial-data-features.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data/spatial-data",
+      "nav_entry": "geospatial-data-features.md",
+      "order": 0,
+      "depth": 3,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Spatial data",
+        "Geospatial Data Features"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1177
+    },
+    {
+      "title": "Create CSV-files",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/create-csv-files/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/load-data/create-csv-files/",
+      "new_path": "docs/01_user-guide/reporter/submit-data/create-csv-files.md",
+      "parent_dir": "docs/01_user-guide/reporter/submit-data",
+      "nav_entry": "create-csv-files.md",
+      "order": 6,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Submit data",
+        "Create CSV-files"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 166
+    },
+    {
+      "title": "Validate data",
+      "old_path": "/reportnet-3-1-reporter-howto/validate-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/validate-data/",
+      "new_path": "docs/01_user-guide/reporter/validate-data/index.md",
+      "parent_dir": "docs/01_user-guide/reporter",
+      "nav_entry": "validate-data/",
+      "order": 3,
+      "depth": 1,
+      "breadcrumb": [
+        "Reporter",
+        "Validate data"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 279
+    },
+    {
+      "title": "Quality control rules",
+      "old_path": "/reportnet-3-1-reporter-howto/validate-data/quality-control/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/validate-data/quality-control/",
+      "new_path": "docs/01_user-guide/reporter/validate-data/quality-control-rules.md",
+      "parent_dir": "docs/01_user-guide/reporter/validate-data",
+      "nav_entry": "quality-control-rules.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Validate data",
+        "Quality control rules"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 286
+    },
+    {
+      "title": "Execute validation",
+      "old_path": "/reportnet-3-1-reporter-howto/validate-data/execute-validation/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/validate-data/execute-validation/",
+      "new_path": "docs/01_user-guide/reporter/validate-data/execute-validation.md",
+      "parent_dir": "docs/01_user-guide/reporter/validate-data",
+      "nav_entry": "execute-validation.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Validate data",
+        "Execute validation"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 285
+    },
+    {
+      "title": "Filter table data",
+      "old_path": "/reportnet-3-1-reporter-howto/validate-data/filter-table-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/validate-data/filter-table-data/",
+      "new_path": "docs/01_user-guide/reporter/validate-data/filter-table-data.md",
+      "parent_dir": "docs/01_user-guide/reporter/validate-data",
+      "nav_entry": "filter-table-data.md",
+      "order": 2,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Validate data",
+        "Filter table data"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 280
+    },
+    {
+      "title": "Canceled validation tasks",
+      "old_path": "/reportnet-3-1-reporter-howto/validate-data/canceled-validation-tasks/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/validate-data/canceled-validation-tasks/",
+      "new_path": "docs/01_user-guide/reporter/validate-data/canceled-validation-tasks.md",
+      "parent_dir": "docs/01_user-guide/reporter/validate-data",
+      "nav_entry": "canceled-validation-tasks.md",
+      "order": 3,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Validate data",
+        "Canceled validation tasks"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1285
+    },
+    {
+      "title": "Release data",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/release-data/",
+      "new_path": "docs/01_user-guide/reporter/release-data/index.md",
+      "parent_dir": "docs/01_user-guide/reporter",
+      "nav_entry": "release-data/",
+      "order": 4,
+      "depth": 1,
+      "breadcrumb": [
+        "Reporter",
+        "Release data"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 290
+    },
+    {
+      "title": "Show/hide release data",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/show-hide-release-data/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/release-data/show-hide-release-data/",
+      "new_path": "docs/01_user-guide/reporter/release-data/show-hide-release-data.md",
+      "parent_dir": "docs/01_user-guide/reporter/release-data",
+      "nav_entry": "show-hide-release-data.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Release data",
+        "Show/hide release data"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 302
+    },
+    {
+      "title": "Release to data collection",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/release-to-data-collection/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/release-data/release-to-data-collection/",
+      "new_path": "docs/01_user-guide/reporter/release-data/release-to-data-collection.md",
+      "parent_dir": "docs/01_user-guide/reporter/release-data",
+      "nav_entry": "release-to-data-collection.md",
+      "order": 2,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Release data",
+        "Release to data collection"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 301
+    },
+    {
+      "title": "Release to the public",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/release-to-the-public/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/release-data/release-to-the-public/",
+      "new_path": "docs/01_user-guide/reporter/release-data/release-to-the-public.md",
+      "parent_dir": "docs/01_user-guide/reporter/release-data",
+      "nav_entry": "release-to-the-public.md",
+      "order": 3,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Release data",
+        "Release to the public"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 291
+    },
+    {
+      "title": "Historical releases",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/historical-releases/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/release-data/historical-releases/",
+      "new_path": "docs/01_user-guide/reporter/release-data/historical-releases.md",
+      "parent_dir": "docs/01_user-guide/reporter/release-data",
+      "nav_entry": "historical-releases.md",
+      "order": 4,
+      "depth": 2,
+      "breadcrumb": [
+        "Reporter",
+        "Release data",
+        "Historical releases"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 306
+    },
+    {
+      "title": "Requester",
+      "old_path": "/sample-page/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/",
+      "new_path": "docs/01_user-guide/requester/index.md",
+      "parent_dir": "docs/01_user-guide",
+      "nav_entry": "requester/",
+      "order": 2,
+      "depth": 0,
+      "breadcrumb": [
+        "Requester"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 61
+    },
+    {
+      "title": "Different dataflow types",
+      "old_path": "/sample-page/dataset-schema/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/dataset-schema/",
+      "new_path": "docs/01_user-guide/requester/different-dataflow-types.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "different-dataflow-types.md",
+      "order": 0,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Different dataflow types"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 64
+    },
+    {
+      "title": "Dataflow users list",
+      "old_path": "/dataflow-users-list/",
+      "old_url": "https://help.reportnet.europa.eu/dataflow-users-list/",
+      "new_path": "docs/01_user-guide/requester/dataflow-users-list.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "dataflow-users-list.md",
+      "order": 1,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Dataflow users list"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 820
+    },
+    {
+      "title": "Manage reference data",
+      "old_path": "/sample-page/manage-reference-data/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/manage-reference-data/",
+      "new_path": "docs/01_user-guide/requester/manage-reference-data.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "manage-reference-data.md",
+      "order": 2,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Manage reference data"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 827
+    },
+    {
+      "title": "Example: Configure a simple questionnaire",
+      "old_path": "/sample-page/example-configure-a-simple-questionnaire/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/example-configure-a-simple-questionnaire/",
+      "new_path": "docs/01_user-guide/requester/example-simple-questionnaire.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "example-simple-questionnaire.md",
+      "order": 3,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Example: Configure a simple questionnaire"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1174
+    },
+    {
+      "title": "Create a dataflow",
+      "old_path": "/sample-page/create-a-dataflow/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataflow/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataflow/index.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "create-a-dataflow/",
+      "order": 4,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataflow"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 351
+    },
+    {
+      "title": "Manage dataflow help",
+      "old_path": "/sample-page/create-a-dataflow/add-specific-help/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataflow/add-specific-help/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataflow/manage-dataflow-help.md",
+      "parent_dir": "docs/01_user-guide/requester/create-a-dataflow",
+      "nav_entry": "manage-dataflow-help.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataflow",
+        "Manage dataflow help"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 353
+    },
+    {
+      "title": "Manage lead reporters",
+      "old_path": "/sample-page/create-a-dataflow/manage-lead-reporters/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataflow/manage-lead-reporters/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataflow/manage-lead-reporters.md",
+      "parent_dir": "docs/01_user-guide/requester/create-a-dataflow",
+      "nav_entry": "manage-lead-reporters.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataflow",
+        "Manage lead reporters"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 352
+    },
+    {
+      "title": "Import/export data schema’s",
+      "old_path": "/sample-page/create-a-dataflow/import-export-data-schemas/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataflow/import-export-data-schemas/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataflow/import-export-data-schemas.md",
+      "parent_dir": "docs/01_user-guide/requester/create-a-dataflow",
+      "nav_entry": "import-export-data-schemas.md",
+      "order": 2,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataflow",
+        "Import/export data schema’s"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 354
+    },
+    {
+      "title": "Create a dataset schema",
+      "old_path": "/sample-page/create-a-dataset-schema/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataset-schema/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataset-schema/index.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "create-a-dataset-schema/",
+      "order": 5,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataset schema"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 355
+    },
+    {
+      "title": "Import/Export table definitions",
+      "old_path": "/sample-page/create-a-dataset-schema/import-export-table-definitions/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataset-schema/import-export-table-definitions/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataset-schema/import-export-table-definitions.md",
+      "parent_dir": "docs/01_user-guide/requester/create-a-dataset-schema",
+      "nav_entry": "import-export-table-definitions.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataset schema",
+        "Import/Export table definitions"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 357
+    },
+    {
+      "title": "Manage a dataflow",
+      "old_path": "/sample-page/create-a-dataflow/manage-a-dataflow/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/create-a-dataflow/manage-a-dataflow/",
+      "new_path": "docs/01_user-guide/requester/create-a-dataset-schema/manage-a-dataflow.md",
+      "parent_dir": "docs/01_user-guide/requester/create-a-dataset-schema",
+      "nav_entry": "manage-a-dataflow.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "Create a dataset schema",
+        "Manage a dataflow"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 636
+    },
+    {
+      "title": "Manage quality control rules",
+      "old_path": "/sample-page/quality-control-rules/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/quality-control-rules/",
+      "new_path": "docs/01_user-guide/requester/manage-quality-control-rules/index.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "manage-quality-control-rules/",
+      "order": 6,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Manage quality control rules"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 356
+    },
+    {
+      "title": "Custom validations (SQL)",
+      "old_path": "/sample-page/quality-control-rules/custom-validations-sql/",
+      "old_url": "https://help.reportnet.europa.eu/sample-page/quality-control-rules/custom-validations-sql/",
+      "new_path": "docs/01_user-guide/requester/manage-quality-control-rules/custom-validations-sql.md",
+      "parent_dir": "docs/01_user-guide/requester/manage-quality-control-rules",
+      "nav_entry": "custom-validations-sql.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "Manage quality control rules",
+        "Custom validations (SQL)"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 128
+    },
+    {
+      "title": "Change Release Date of Dataset (Custodian/Admin)",
+      "old_path": "/change-release-date-of-dataset/",
+      "old_url": "https://help.reportnet.europa.eu/change-release-date-of-dataset/",
+      "new_path": "docs/01_user-guide/requester/change-release-date.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "change-release-date.md",
+      "order": 7,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Change Release Date of Dataset (Custodian/Admin)"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1201
+    },
+    {
+      "title": "Validate & Run SQL as Provider",
+      "old_path": "/validate-run-sql-as-provider/",
+      "old_url": "https://help.reportnet.europa.eu/validate-run-sql-as-provider/",
+      "new_path": "docs/01_user-guide/requester/validate-and-run-sql-as-provider.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "validate-and-run-sql-as-provider.md",
+      "order": 8,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "Validate & Run SQL as Provider"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1300
+    },
+    {
+      "title": "ReportNet3 Import/Export (vs CWS)",
+      "old_path": "/post-processing-in-the-common-workspace/",
+      "old_url": "https://help.reportnet.europa.eu/post-processing-in-the-common-workspace/",
+      "new_path": "docs/01_user-guide/requester/import-export-vs-cws/index.md",
+      "parent_dir": "docs/01_user-guide/requester",
+      "nav_entry": "import-export-vs-cws/",
+      "order": 9,
+      "depth": 1,
+      "breadcrumb": [
+        "Requester",
+        "ReportNet3 Import/Export (vs CWS)"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 833
+    },
+    {
+      "title": "FME connectors",
+      "old_path": "/fme-connectors/",
+      "old_url": "https://help.reportnet.europa.eu/fme-connectors/",
+      "new_path": "docs/01_user-guide/requester/import-export-vs-cws/fme-connectors.md",
+      "parent_dir": "docs/01_user-guide/requester/import-export-vs-cws",
+      "nav_entry": "fme-connectors.md",
+      "order": 0,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "ReportNet3 Import/Export (vs CWS)",
+        "FME connectors"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 863
+    },
+    {
+      "title": "External integration possibilities",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/external-integration-possibilities/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/release-data/external-integration-possibilities/",
+      "new_path": "docs/01_user-guide/requester/import-export-vs-cws/external-integration-possibilities.md",
+      "parent_dir": "docs/01_user-guide/requester/import-export-vs-cws",
+      "nav_entry": "external-integration-possibilities.md",
+      "order": 1,
+      "depth": 2,
+      "breadcrumb": [
+        "Requester",
+        "ReportNet3 Import/Export (vs CWS)",
+        "External integration possibilities"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 836
+    },
+    {
+      "title": "Preparation datasets",
+      "old_path": "/reportnet-3-1-reporter-howto/preparation-datasets/",
+      "old_url": "https://help.reportnet.europa.eu/reportnet-3-1-reporter-howto/preparation-datasets/",
+      "new_path": "docs/01_user-guide/preparation-datasets.md",
+      "parent_dir": "docs/01_user-guide",
+      "nav_entry": "preparation-datasets.md",
+      "order": 3,
+      "depth": 0,
+      "breadcrumb": [
+        "Preparation datasets"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1370
+    },
+    {
+      "title": "Webforms",
+      "old_path": "/webforms/",
+      "old_url": "https://help.reportnet.europa.eu/webforms/",
+      "new_path": "docs/01_user-guide/webforms.md",
+      "parent_dir": "docs/01_user-guide",
+      "nav_entry": "webforms.md",
+      "order": 4,
+      "depth": 0,
+      "breadcrumb": [
+        "Webforms"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 57
+    },
+    {
+      "title": "Rest API",
+      "old_path": "/rest-api/",
+      "old_url": "https://help.reportnet.europa.eu/rest-api/",
+      "new_path": "docs/01_user-guide/rest-api/index.md",
+      "parent_dir": "docs/01_user-guide",
+      "nav_entry": "rest-api/",
+      "order": 5,
+      "depth": 0,
+      "breadcrumb": [
+        "Rest API"
+      ],
+      "is_section": true,
+      "wp_menu_item_id": 65
+    },
+    {
+      "title": "Import API endpoints",
+      "old_path": "/import-api-endpoints/",
+      "old_url": "https://help.reportnet.europa.eu/import-api-endpoints/",
+      "new_path": "docs/01_user-guide/rest-api/import-api-endpoints.md",
+      "parent_dir": "docs/01_user-guide/rest-api",
+      "nav_entry": "import-api-endpoints.md",
+      "order": 0,
+      "depth": 1,
+      "breadcrumb": [
+        "Rest API",
+        "Import API endpoints"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1215
+    },
+    {
+      "title": "Export API Endpoints",
+      "old_path": "/export-api-endpoints/",
+      "old_url": "https://help.reportnet.europa.eu/export-api-endpoints/",
+      "new_path": "docs/01_user-guide/rest-api/export-api-endpoints.md",
+      "parent_dir": "docs/01_user-guide/rest-api",
+      "nav_entry": "export-api-endpoints.md",
+      "order": 1,
+      "depth": 1,
+      "breadcrumb": [
+        "Rest API",
+        "Export API Endpoints"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1171
+    },
+    {
+      "title": "Validation API endpoints",
+      "old_path": "/validation-api-endpoints/",
+      "old_url": "https://help.reportnet.europa.eu/validation-api-endpoints/",
+      "new_path": "docs/01_user-guide/rest-api/validation-api-endpoints.md",
+      "parent_dir": "docs/01_user-guide/rest-api",
+      "nav_entry": "validation-api-endpoints.md",
+      "order": 2,
+      "depth": 1,
+      "breadcrumb": [
+        "Rest API",
+        "Validation API endpoints"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1214
+    },
+    {
+      "title": "Poll for job status",
+      "old_path": "/poll-for-job-status/",
+      "old_url": "https://help.reportnet.europa.eu/poll-for-job-status/",
+      "new_path": "docs/01_user-guide/rest-api/poll-for-job-status.md",
+      "parent_dir": "docs/01_user-guide/rest-api",
+      "nav_entry": "poll-for-job-status.md",
+      "order": 4,
+      "depth": 1,
+      "breadcrumb": [
+        "Rest API",
+        "Poll for job status"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1289
+    },
+    {
+      "title": "Validation Results per Release Snapshot",
+      "old_path": "/validation-results-per-release-snapshot/",
+      "old_url": "https://help.reportnet.europa.eu/validation-results-per-release-snapshot/",
+      "new_path": "docs/01_user-guide/rest-api/validation-results-per-snapshot.md",
+      "parent_dir": "docs/01_user-guide/rest-api",
+      "nav_entry": "validation-results-per-snapshot.md",
+      "order": 5,
+      "depth": 1,
+      "breadcrumb": [
+        "Rest API",
+        "Validation Results per Release Snapshot"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": 1328
+    },
+    {
+      "title": "How to log off",
+      "old_path": "/general/get-access/how-to-log-off/",
+      "old_url": "https://help.reportnet.europa.eu/general/get-access/how-to-log-off/",
+      "new_path": "docs/01_user-guide/general/login-to-reportnet/how-to-log-off.md",
+      "parent_dir": "docs/01_user-guide/general/login-to-reportnet",
+      "nav_entry": "how-to-log-off.md",
+      "order": 3,
+      "depth": 2,
+      "breadcrumb": [
+        "General",
+        "Login to Reportnet",
+        "How to log off"
+      ],
+      "is_section": false,
+      "wp_menu_item_id": null,
+      "was_orphan": true
+    }
+  ],
+  "aliases": [
+    {
+      "title": "Manage dataset copies",
+      "old_path": "/reportnet-3-1-reporter-howto/load-data/submit-data/manage-dataset-copies/",
+      "canonical": "docs/01_user-guide/reporter/submit-data/manage-dataset-copies.md",
+      "duplicate_at": "Reporter/Release data/Manage dataset copies",
+      "parent_dir": "docs/01_user-guide/reporter/release-data",
+      "order": 0
+    },
+    {
+      "title": "Example: Configure a simple questionnaire",
+      "old_path": "/sample-page/example-configure-a-simple-questionnaire/",
+      "canonical": "docs/01_user-guide/requester/example-simple-questionnaire.md",
+      "duplicate_at": "Requester/Create a dataset schema/Example: Configure a simple questionnaire",
+      "parent_dir": "docs/01_user-guide/requester/create-a-dataset-schema",
+      "order": 2
+    },
+    {
+      "title": "External integration possibilities",
+      "old_path": "/reportnet-3-1-reporter-howto/release-data/external-integration-possibilities/",
+      "canonical": "docs/01_user-guide/requester/import-export-vs-cws/external-integration-possibilities.md",
+      "duplicate_at": "Rest API/External integration possibilities",
+      "parent_dir": "docs/01_user-guide/rest-api",
+      "order": 3
+    }
+  ],
+  "unplaced_orphans": [
+    "/sql-db-setup/",
+    "/data-flow-monitoring/"
+  ]
+}

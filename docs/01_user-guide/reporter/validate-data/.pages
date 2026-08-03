@@ -1,0 +1,7 @@
+title: Validate data
+nav:
+  - index.md
+  - Quality control rules: quality-control-rules.md
+  - Execute validation: execute-validation.md
+  - Filter table data: filter-table-data.md
+  - Canceled validation tasks: canceled-validation-tasks.md

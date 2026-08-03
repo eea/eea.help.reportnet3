@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "4e29bfff-2a0d-4970-8bc1-63957b66e449",
+		"name": "Reportnet - create public files",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17909578"
+	},
+	"item": [
+		{
+			"name": "Create public files",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARER_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://sandbox-api.reportnet.europa.eu/dataset/createPublicFiles?dataflowId=7188&providerId=22",
+					"protocol": "https",
+					"host": [
+						"sandbox-api",
+						"reportnet",
+						"europa",
+						"eu"
+					],
+					"path": [
+						"dataset",
+						"createPublicFiles"
+					],
+					"query": [
+						{
+							"key": "dataflowId",
+							"value": "7188"
+						},
+						{
+							"key": "providerId",
+							"value": "22"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

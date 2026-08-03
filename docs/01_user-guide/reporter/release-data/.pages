@@ -1,0 +1,8 @@
+title: Release data
+nav:
+  - index.md
+  - Manage dataset copies: ../submit-data/manage-dataset-copies.md   # also listed under its canonical section
+  - Show/hide release data: show-hide-release-data.md
+  - Release to data collection: release-to-data-collection.md
+  - Release to the public: release-to-the-public.md
+  - Historical releases: historical-releases.md

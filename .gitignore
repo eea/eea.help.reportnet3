@@ -1,0 +1,11 @@
+# MkDocs build output
+/site/
+
+# Local Python environment for the docs build and migration tooling
+/.venv/
+
+# Local Claude Code tool permissions — machine-specific, not shared config
+/.claude/settings.local.json
+
+# macOS
+.DS_Store
