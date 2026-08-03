@@ -146,6 +146,11 @@ validation:
     not_found: warn
 
 extra:
+  # Removes the "Made with Material for MkDocs" line from the footer. The
+  # override in overrides/partials/copyright.html honours this flag, so the
+  # notice can be restored by deleting the line rather than editing markup.
+  generator: false
+
   # Points the header logo and site title at the Reportnet platform itself
   # rather than at this site's own home page. Material reads this key directly;
   # no theme override is needed.
