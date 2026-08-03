@@ -69,7 +69,6 @@ plugins:
         general/get-access/you-have-an-eu-login/index.md: general/login-to-reportnet/link-my-eu-login.md
         general/my-global-settings/index.md: general/user-settings/index.md
         general/my-global-settings/privacy-policy/index.md: general/user-settings/privacy-policy.md
-        general/whats-new/index.md: general/whats-new.md
         geospatial-data-features/index.md: reporter/submit-data/spatial-data/geospatial-data-features.md
         how-to-add-supporting-reporters-to-my-dataflow/index.md: reporter/dataflow-home-page/add-supporting-reporters.md
         import-api-endpoints/index.md: rest-api/import-api-endpoints.md
@@ -115,7 +114,6 @@ plugins:
         validate-run-sql-as-provider/index.md: requester/validate-and-run-sql-as-provider.md
         validation-api-endpoints/index.md: rest-api/validation-api-endpoints.md
         validation-results-per-release-snapshot/index.md: rest-api/validation-results-per-snapshot.md
-        webforms/index.md: webforms.md
   # END GENERATED REDIRECTS
 
 markdown_extensions:

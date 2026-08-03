@@ -34,23 +34,11 @@ jobs:
       - name: Build site
         run: mkdocs build --strict
 
-      # --strict validates links written in Markdown, but not links produced by
-      # the navigation itself. A .pages entry pointing outside its own directory
-      # is passed through into the sidebar as a raw .md href that 404s, and the
-      # build stays green. This catches that. The only legitimate .md links in
-      # the output are the "Edit this page" links back to GitHub.
-      - name: Check for unresolved .md links in the built site
-        run: |
-          if grep -rhoP 'href="[^"]*\.md"' site --include="*.html" \
-               | grep -v 'github\.com' | sort -u | grep .; then
-            echo "::error::Found .md links in the built site (listed above)."
-            echo "These do not resolve. A nav entry in a .pages file most likely"
-            echo "references a file outside its own directory, which MkDocs"
-            echo "cannot resolve. Move the page, or cross-link it from the page"
-            echo "body instead of the navigation."
-            exit 1
-          fi
-          echo "No unresolved .md links."
+      # --strict validates links written in Markdown. It does not check links
+      # the navigation emits, nor the redirect stubs, which mkdocs-redirects
+      # writes after the build finishes. Both have caused live breakage here.
+      - name: Check the built site
+        run: python tools/check_built_site.py
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'

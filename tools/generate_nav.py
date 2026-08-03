@@ -101,6 +101,21 @@ def build_pages_files(entries, aliases, docs_root):
     return written
 
 
+def to_url(doc_path):
+    """The URL MkDocs serves a given docs-relative file at.
+
+    Directory URLs are the default, so both `webforms.md` and
+    `webforms/index.md` are served at `/webforms/`. Comparing file paths is
+    therefore not enough to tell whether two entries collide — they have to be
+    reduced to the URL first.
+    """
+    if doc_path == "index.md":
+        return "/"
+    if doc_path.endswith("/index.md"):
+        return "/" + doc_path[: -len("index.md")]
+    return "/" + doc_path[:-3] + "/"
+
+
 def build_redirects(entries, docs_dir):
     """old WordPress URL path -> new docs-relative markdown file.
 
@@ -108,20 +123,34 @@ def build_redirects(entries, docs_dir):
     root (/rest-api/, /sample-page/...), so the redirect stub has to be emitted
     at that same root path — not under the new section directory. Values are
     relative to docs_dir, which is what mkdocs-redirects expects.
+
+    A redirect is dropped when its stub would land on the URL of a real page.
+    mkdocs-redirects writes its stubs after the build, so such a stub silently
+    overwrites the page it collides with. Where the collision is with the
+    redirect's own target the result is a page that refreshes to itself
+    forever; where it is with a different page, that page disappears.
     """
     prefix = docs_dir + "/"
-    out = {}
+    pages = {}                              # url -> doc path of a real page
+    planned = []
     for e in entries:
-        old = e["old_path"].strip("/")
-        if not old:
-            continue                       # site root needs no redirect
         new = e["new_path"]
         assert new.startswith(prefix), new
-        src, dst = f"{old}/index.md", new[len(prefix):]
-        if src == dst:
-            continue                       # already at its final location
+        dst = new[len(prefix):]
+        pages[to_url(dst)] = dst
+        old = e["old_path"].strip("/")
+        if old:                             # site root needs no redirect
+            planned.append((f"{old}/index.md", dst))
+
+    out, dropped = {}, []
+    for src, dst in planned:
+        src_url = to_url(src)
+        collides_with = pages.get(src_url)
+        if collides_with is not None:
+            dropped.append((src, dst, src_url, collides_with))
+            continue
         out[src] = dst
-    return dict(sorted(out.items()))
+    return dict(sorted(out.items())), dropped
 
 
 def inject_redirects(mkdocs_path, redirects):
@@ -158,9 +187,17 @@ def main():
     # docs_root is "docs/01_user-guide"; redirect targets are relative to the
     # docs_dir ("docs"), so strip the first segment.
     docs_dir = docs_root.split("/", 1)[0]
-    redirects = build_redirects(plan["entries"], docs_dir)
+    redirects, dropped = build_redirects(plan["entries"], docs_dir)
     inject_redirects(args.mkdocs, redirects)
     print(f"\nInjected {len(redirects)} redirects into {args.mkdocs}")
+
+    if dropped:
+        print(f"\nDropped {len(dropped)} redirect(s) that would have overwritten"
+              " a real page — the old URL already serves the right content:")
+        for src, dst, url, page in dropped:
+            note = "its own target" if page == dst else f"the page {page}"
+            print(f"  {src} -> {dst}")
+            print(f"      stub would land on {url}, which is {note}")
 
 
 if __name__ == "__main__":
