@@ -2,3 +2,4 @@ title: Manage quality control rules
 nav:
   - index.md
   - Custom validations (SQL): custom-validations-sql.md
+  - QC rule types and how they are applied: qc_rules_type_applied_order.md
