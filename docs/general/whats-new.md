@@ -9,6 +9,40 @@ The EEA Reportnet team is maintaining this platform on a constant basis. We have
 ##
 
 * * *
+## ✅ Fixes & Clarifications (September 2026)
+
+In September, we focused on improving API reliability, data validation, file handling, and task monitoring.
+
+  * **API** reliability improved: In **PollForJobStatus**, an issue that could block access when the `providerId` was null has been resolved.
+  * **Transport** attachment uploads fixed: In **Transport**, uploading files through attachment fields now works correctly.
+  * **Automatic QC rules** improved: An issue affecting multi-select values containing parentheses has been resolved.
+  * **QC validation** improved: In **QC Rules**, custom QCs that still reference an old table name after the table has been renamed are now correctly marked as invalid when **Validate QCs** is executed.
+  * **Jobs Monitoring** updated: In **Transport**, messages related to **Cancelled Tasks** are now displayed in the Jobs Monitoring page.
+  * **EEA Cooperating Countries** updated: On the public **Countries** page, **Ukraine** has been added to the list of EEA Cooperating Countries.
+
+## 🚀 Features & Enhancements (September 2026)
+
+We delivered updates focusing on preparation dataset management, and improved documentation.
+
+  * **Preparation datasets** editing enabled: In **Preparation Datasets**, editing functionality has been enabled, together with the relevant notifications for both parent and preparation datasets.
+  * **Preparation Datasets & QC Rules** documentation expanded: The documentation now describes the differences between **Citus** and **Big Data** implementations for Preparation Datasets and QC Rules.
+
+
+## ✅ Fixes & Clarifications (August 2026)
+In August, we focused on improving platform stability, release behavior, login reliability, and the handling of geospatial and text receipt operations.
+  * **Text receipts** improved: In **Text Receipts**, content that spans multiple pages is now displayed correctly, with the release date shown only once and datasets listed in alphabetical order.
+  * **SNC** checkbox visibility corrected: In **Dataflow Creation**, the SNC checkbox is now visible only when creating **Business Dataflows**.
+  * **PostgreSQL** dependency updated: In **Security**, PostgreSQL was updated in the develop branch to version **42.6.1**.
+  * **Geospatial import** feedback improved: In **Geometries**, a notification is now displayed with the conversion message while importing geospatial files.
+  * **Release** job status corrected: In **Release**, newly started jobs now appear as **QUEUED** instead of immediately showing as **IN PROGRESS**.
+  * **Login after migration** fixed: In **Login**, an issue that could leave users on a gray page when logging into the platform after a migration has been resolved.
+
+## 🚀 Features & Enhancements (August 2026)
+
+We delivered updates focusing on clearer user feedback, improved data presentation, and more consistent platform behavior.
+
+  * Improved **text receipt** presentation: In **Text Receipts**, multi-page content is now easier to follow, with a single release date and alphabetically ordered datasets.
+  * Improved **geospatial conversion** feedback: In **Geometries**, users now receive clear feedback during geospatial file imports while the conversion is being performed.
 
 ## ✅ Fixes & Clarifications (July 2026)
 
