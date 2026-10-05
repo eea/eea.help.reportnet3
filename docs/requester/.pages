@@ -6,10 +6,11 @@ nav:
   - Manage reference data: manage-reference-data.md
   - "Example: Configure a simple questionnaire": example-simple-questionnaire.md
   - Create a dataflow: create-a-dataflow
+  - Technical feedback and manual technical acceptance: technical-feedback-and-manual-acceptance.md
   - Create a dataset schema: create-a-dataset-schema
   - Manage quality control rules: manage-quality-control-rules
   - Change Release Date of Dataset (Custodian/Admin): change-release-date.md
   - "Validate & Run SQL as Provider": validate-and-run-sql-as-provider.md
   - Expression and QC rules (Citus and Dremio): expression_builder_and_qc.md
   - ReportNet3 Import/Export (vs CWS): import-export-vs-cws
-  - Technical feedback and manual technical acceptance: technical-feedback-and-manual-acceptance.md
+  
