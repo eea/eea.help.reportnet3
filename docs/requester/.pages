@@ -12,3 +12,4 @@ nav:
   - "Validate & Run SQL as Provider": validate-and-run-sql-as-provider.md
   - Expression and QC rules (Citus and Dremio): expression_builder_and_qc.md
   - ReportNet3 Import/Export (vs CWS): import-export-vs-cws
+  - Technical feedback and manual technical acceptance: technical-feedback-and-manual-acceptance.md
