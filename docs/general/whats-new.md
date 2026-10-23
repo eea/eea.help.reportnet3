@@ -8,6 +8,47 @@ The EEA Reportnet team is maintaining this platform on a constant basis. We have
 
 ##
 
+
+* * *
+## ✅ Fixes & Clarifications (October 2026)
+
+In October, we focused on improving dataset exports, character encoding, and webform functionality.
+
+  * **Dataset exports** fixed: An issue preventing the download of CSV files for large datasets has been resolved.
+  * **CSV encoding** improved: A BOM (Byte Order Mark) is now added at the beginning of exported CSV files to ensure non-English characters are displayed correctly.
+  * **Webforms** fixed: An issue affecting changes to linked fields in both webforms and tabular data has been resolved.
+
+## 🚀 Features & Enhancements (October 2026)
+
+We delivered updates focusing on preparation dataset management and improved job monitoring information.
+
+  * **Preparation Datasets** locking improved: Dataset locking during validation now applies only to the dataset being validated, allowing users to work independently on different Preparation Datasets.
+  * **Jobs Monitoring** enhanced: The provider name is now displayed in the relevant column.
+  * **Jobs Monitoring** dataset information improved: When a dataset is null, the relevant column now displays the dataset type (e.g. Test or Design).
+
+
+
+## ✅ Fixes & Clarifications (September - Early October 2026)
+
+We focused on improving error handling, security, and data validation.
+
+  * **Dataflow search** enhanced: Search functionality in **Dataflows** has been improved to support more complex search queries.
+  * **Reference Lists** error display improved: When the number of errors exceeds 1,000, the display now shows **1,000+**.
+  * **Automatic QC Rules** fixed: Multi-select options containing commas are no longer incorrectly split into separate parameters.
+  * **Security** improved: A patch has been implemented to prevent potential SQL injection vulnerabilities.
+  * **Security** strengthened: Certain endpoints have been secured to prevent access by unauthenticated users.
+
+## 🚀 Features & Enhancements (September - Early October 2026)
+
+We delivered updates focusing on dataset management, data collection validation, preparation dataset processing, attachment handling, and job monitoring.
+
+  * **Dataset status** management enabled via API: Users can now change a dataset's status by creating an API key and making an API call.
+  * **Data Collection** validation improved: A pre-check now detects empty tables in Reference Datasets before QC validation begins.
+  * **Data Collection creation** notifications improved: When disabled rules are present, users who proceed with creation now receive an informational message instead of an error.
+  * **Preparation Datasets** view management enhanced: View creation and rebuilding now support Preparation Datasets across all relevant workflows, including import, ETL import, and Iceberg-to-Parquet conversion following webform edits.
+  * **Attachment fields** file size limit increased: The maximum allowed file size for attachments is now **100 MB**.
+  * **Monitoring** enhanced: Automatic detection and recovery of stuck Import and Release jobs have been introduced.
+
 * * *
 ## ✅ Fixes & Clarifications (September 2026)
 
